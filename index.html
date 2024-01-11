@@ -4,21 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mark Skobelevs Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/css/application.css">
+
 </head>
 <body>
     <div class="main-body">
         <!-- Banner image -->
         <div class="header">
             <div class="banner-text">
-                <h1>Mark Skobelevs</h1>
+                <h1 class="h1">Mark Skobelevs</h1>
             </div>
             <div class="banner-text">
                 Web Developer
             </div>
-            
+            <div><a href='#container-top'>Scroll down</a></div>
         </div>
         <!-- Sticky side bar -->
-        <div class="sidebar">
+        <div class="sidebar hidden-xs">
             <div class="top-left-initials">
                 MS
             </div>
@@ -30,69 +35,92 @@
 
         </div>
         <!-- Projects -->
-        <div class="container">
-            My Portfolio
-               <div class="grid">   
+        <div class="container" id="container-top">
+            <div class="h2"><h2>My Portfolio</h2> </div>
+               <div class="project-grid">   
+             
                     <div class="project-grid-col-1">
-                        <div class="project-1">
-                            Project 1
+                        <div class="project-1 project-container">
+                        
                             <div class="contents-container">
-                                <div class="project-image"></div>
-                                <div class="project-text"></div>
+                                <div class="project-image"><img src="styles/images/netmatters.png" alt="placeholder"></div>
+                                <div class="container-h3"> <h3> Netmatters Webpage </h3></div>
+                                <div class="project-text"><p>Pellentesque habitant morbi tristique senectus et netus et.</p>
+                                </div>
+                                <span class="tags">HTML</span><span class="tags">CSS/SASS</span>
+                                <!-- GO DOWNLOAD ICONS -->
+                                <div class="viewlink"><span class="viewlink-click" >View link<span class=icons> -&gt; </span></span> </div>
                             </div>
                         </div>
                     </div>
                     <div class="project-grid-col-2">
-                        <div class="project-2">
+                        <div class="project-2 project-container">
                             Project 2
                             <div class="contents-container">
-                                <div class="project-image"></div>
-                                <div class="project-text"></div>
+                                <div class="project-image"><img src="styles/images/placeholder.jpg" alt="placeholder">   </div>
+                                <div class="project-text"><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p></div>
                             </div>
                         </div>
                     </div>     
                     <div class="project-grid-col-3">
-                        <div class="project-3">
+                        <div class="project-3 project-container">
                             Project 3
                             <div class="contents-container">
-                                <div class="project-image"></div>
-                                <div class="project-text"></div>
+                                <div class="project-image"><img src="styles/images/placeholder.jpg" alt="placeholder">   </div>
+                                <div class="project-text"><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p></div>
                             </div>
                         </div>
                     </div>     
                     <div class="project-grid-col-1">
-                        <div class="project-4">
+                        <div class="project-4 project-container">
                             Project 4
                             <div class="contents-container">
-                                <div class="project-image"></div>
-                                <div class="project-text"></div>
+                                <div class="project-image"><img src="styles/images/placeholder.jpg" alt="placeholder">   </div>
+                                <div class="project-text"><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p></div>
                             </div>
                         </div>
                     </div>   
                     <div class="project-grid-col-2">
-                        <div class="project-5">
+                        <div class="project-5 project-container">
                             Project 5
                             <div class="contents-container">
-                                <div class="project-image"></div>
-                                <div class="project-text"></div>
+                                <div class="project-image"><img src="styles/images/placeholder.jpg" alt="placeholder">   </div>
+                                <div class="project-text"><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p></div>
                             </div>
-                        </div>
-                    </div>   
-                    <div class="project-grid-col-3">
-                        <div class="project-6">
-                            Project 6
-                            <div class="contents-container">
-                                <div class="project-image"></div>
-                                <div class="project-text"></div>
                             </div>
-                        </div>
+                        </div>   
+                        <div class="project-grid-col-3">
+                            <div class="project-6 project-container">
+                                Project 6
+                                <div class="contents-container">
+                                    <div class="project-image"><img src="styles/images/placeholder.jpg" alt="placeholder">   </div>
+                                    <div class="project-text"><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p></div>
+                                </div>
+                            </div>
                     </div>   
         
                 </div>  
         </div>
         <!-- Form -->
         <div class="container">
-
+            <div class="get-in-touch">
+                <h3>Get In Touch</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur repellendus autem, suscipit iure beatae corrupti!</p>
+                <h4>0000-0000-000</h4>
+                <h5>mark-skobelevs@netmatters-scs.com</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil optio numquam quos voluptas. Obcaecati, accusantium alias saepe, ad eaque facilis voluptatem sapiente laudantium deserunt possimus excepturi quibusdam, modi eveniet facere!</p>
+            </div>
+            <div class="leave-a-message">
+                <form class="form-field">
+                    <input type="text" class="input-field" placeholder="First Name*">
+                    <input type="text" class="input-field" placeholder="Last Name*">
+                    <input type="text" class="input-field" placeholder="Email Address*">
+                    <input type="text" class="input-field" placeholder="Subject">
+                    <textarea type="text" class="input-field" placeholder="Message"></textarea>
+                    <!-- submit button - gotta CSS  -->
+                    <span> Submit</span>
+                </form>
+            </div>
         </div>
 
 

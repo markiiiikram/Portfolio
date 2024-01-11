@@ -1,0 +1,22 @@
+*,
+::before,
+::after {
+    box-sizing:border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+.main-body{
+    position:relative;
+    text-align:center;
+    color:#fff;
+}
+
+body{
+    font-size:100%;
+    font-family: 'Roboto', sans-serif;
+    background-color:$grey-main;
+    margin:0px;
+    padding:0px;
+    scroll-behavior: smooth;
+}

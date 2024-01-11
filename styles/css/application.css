@@ -1,0 +1,164 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.main-body {
+  position: relative;
+  text-align: center;
+  color: #fff;
+}
+
+body {
+  font-size: 100%;
+  font-family: 'Roboto', sans-serif;
+  background-color: #242729;
+  margin: 0px;
+  padding: 0px;
+  scroll-behavior: smooth;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #66fcf1;
+  height: 100vh;
+}
+
+.project-grid > .h1 {
+  font-size: 3rem;
+  color: white;
+}
+
+.header > .h1 {
+  font-size: 5rem;
+  overflow-wrap: break-word;
+  color: #66fcf1;
+}
+
+.project-grid, .project-container {
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.project-grid {
+  gap: 30px;
+  padding: 15px;
+}
+
+.project-container {
+  text-align: center;
+  justify-content: center;
+  font-size: 30px;
+  border: 3px solid #66fcf1;
+  padding: 5px;
+  box-shadow: rgba(255, 255, 255, 0.3) 0px 3px 35px 10px;
+  color: white;
+  top: 0;
+  transition: .5s;
+}
+
+.project-container:hover {
+  transform: translate(0, -30px);
+  transform: scale(1.1);
+}
+
+.contents-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-image > img {
+  width: 100%;
+  padding: 0px;
+}
+
+.project-text {
+  font-size: 1.3rem;
+}
+
+.tags {
+  font-size: 0.8125rem;
+  padding: 5px;
+}
+
+@media (min-width: 450px) {
+  .project-grid {
+    width: 80%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1260px) {
+  .project-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1260px) {
+  .project-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.sidebar {
+  background-color: red;
+}
+
+.hidden-xs {
+  display: none;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-h3 > h3 {
+  margin: 0px;
+}
+
+.get-in-touch, .leave-a-message {
+  padding: 5px 15px;
+}
+
+.input-field {
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  margin-top: 10px;
+  padding: 15px 20px;
+  background-color: #FAF9F6;
+}
+
+.message {
+  min-height: 10px;
+}
+
+.input-field:focus {
+  border-color: #5bc0de;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6);
+}
+
+@media (min-width: 768px) {
+  .leave-a-message {
+    display: inline-flex;
+    justify-content: center;
+  }
+  .input-field:nth-child(-n+2) {
+    display: inline;
+    width: 49.5%;
+  }
+  .input-field {
+    width: 99%;
+  }
+}
