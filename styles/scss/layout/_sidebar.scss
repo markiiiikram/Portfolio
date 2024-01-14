@@ -1,7 +1,116 @@
-.sidebar{
-    background-color:red;
+    @mixin circles{
+    display:block;
+    position:absolute;
+    height:100vh;
+    width:1500px;
+    top:1px;
+    border-radius:50vh;
+    z-index:-10;
+    display:none;
 }
-
+@mixin flex-b-200{
+    flex-basis:200px;
+    flex-grow:1;
+}
 .hidden-xs{
     display:none;
 }
+
+.top-left-initials{
+    font-size:6.25rem;
+    line-height:1;
+    flex-grow:1;
+    margin-bottom:135%;
+    text-align:center;
+}
+
+.sidebar{
+    position:absolute;
+    top:1px;
+    line-height:5;
+    height:100vh;
+    background-color:$grey-light;
+    width:250px;
+    border:3px solid $black;
+    border-left:0;
+    left:1px;
+    }
+@media (min-width:992px){
+
+
+    .sidebar-content{
+        text-align: left;
+      
+
+    }
+    .hidden-xs{
+        display:block;
+        position:fixed;
+    }
+
+    .circle-1{
+         @include circles();
+        left:99%;
+        text-align:right;
+        border-radius:50vh;
+        background-color:$grey-light;
+        rotate:180deg;
+        right:-100%;
+    }
+    .circle-2{
+        @include circles();
+        background-color:$blue-dark;
+        right:3%;
+    }
+    .circle-3{
+        @include circles();
+        background-color:$grey-dark;
+        right:3%;
+    }
+    .circle-4{
+        @include circles();
+        background-color:$grey-light;
+        right:3%;
+    }
+    .circle-5{
+        @include circles();
+        background-color:$blue-dark;
+        right:3%;
+    }
+    .circle-6{
+        @include circles();
+        background-color:$grey-dark;
+        right:3%;
+    }
+   
+    }
+
+
+
+// .nav{
+//     &__list{
+//         background-color:$grey-light;
+//         box-shadow:0px 0px 10px $white;
+//         padding:1rem 0;
+//         width:5rem;
+//         height:100vh;
+//         position:fixed;
+//         display:flex;
+//         flex-direction:column;
+//         align-items:center;
+//         gap:2rem;
+//         left:1px;
+//         top:0;
+//     }
+//     &__item{
+//         list-style:none;
+//         font-size:0.7rem;
+   
+//         text-align:center;
+//         transition:all 200ms ease-in;
+//     }
+// }
+// media query section
+
+
+

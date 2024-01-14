@@ -11,8 +11,19 @@
     font-size:3rem;
     color:white;
 }
-.header > .h1{
+.banner-text{
+    margin-top:auto;
+    margin-bottom:auto;
+}
+.h1{
     font-size:5rem;
     overflow-wrap:break-word;
     color:$blue;
+}
+.scroll-down{
+    text-decoration: none !important;
+    font-weight:500;
+    color:$white;
+    font-size:36px;
+    line-height:5;
 }

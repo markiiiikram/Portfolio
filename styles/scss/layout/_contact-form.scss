@@ -1,5 +1,8 @@
 .get-in-touch, .leave-a-message{
-    padding:5px 15px;
+    // padding:5px 15px;
+    width:80%;
+    margin-left:auto;
+    margin-right:Auto;
 }
 
 
@@ -20,18 +23,39 @@
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6);
 }
 
-
+#submit{
+    grid-column:span 2;
+    align-self:center;
+}
 @media (min-width:768px){
+
+}
+@media (min-width:1260px){
     .leave-a-message{
         display:inline-flex;
         justify-content: center;
+        width:750px;
     }
-    .input-field:nth-child(-n+2){
-        display:inline;
-        width:49.5%;
-     
-    }
-    .input-field{
-        width:99%;
-    }
+    // .form-field{
+    // flex-grow:1;
+    // display:grid;
+    // grid-template-columns: 1fr 1fr;
+    // grid-auto-rows:1fr;
+    // gap:15px;
+    // }
+    // .input-field:nth-child(5){
+    //     grid-column:1 / 3;
+    // }
+    // .input-field:nth-child(5){
+    //     grid-column:span 2;
+    // }
+    // .get-in-touch h3{
+    //     font-size:2rem;
+    // }
+    // .get-in-touch h4 {
+    //     font-size:1.5rem;
+    // }
+    // .get-in-touch h5{
+    //     font-size:1.3rem;
+    // }
 }

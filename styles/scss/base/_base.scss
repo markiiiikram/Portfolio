@@ -2,6 +2,21 @@
 ::before,
 ::after {
     box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+@mixin center{
+    margin-left:auto;
+    margin-right:auto;
+}
+@mixin full-height{
+    height:100vh;
+}
+
+@mixin width80{
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
 }
 html{
     scroll-behavior: smooth;
@@ -10,6 +25,7 @@ html{
     position:relative;
     text-align:center;
     color:#fff;
+    @include center();
 }
 
 body{
@@ -19,4 +35,7 @@ body{
     margin:0px;
     padding:0px;
     scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
 }

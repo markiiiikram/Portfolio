@@ -11,36 +11,53 @@
 
 </head>
 <body>
-    <div class="main-body">
+   <div class="grid">
+        <div class="sidebar hidden-xs">
+            <div class="sidebar-content">
+                <div class="top-left-initials">
+                    MS
+                </div>
+                <ul class="nav-bar">
+                    <li style="--clr:#00ade1">
+                      <a href="#" data-text="&nbsp;Home">&nbsp;Home&nbsp;</a>
+                    </li>
+                    <li style="--clr:#ff6492">
+                      <a href="#" data-text="&nbsp;About">&nbsp;About&nbsp;</a>
+                    </li>
+                    <li style="--clr:#ffdd1c">
+                      <a href="#" data-text="&nbsp;Services">&nbsp;Services&nbsp;</a>
+                    </li>
+                    <li style="--clr:#00dc82">
+                      <a href="#" data-text="&nbsp;Blog">&nbsp;Blog&nbsp;</a>
+                    </li>
+                    <li style="--clr:#dc00d4">
+                      <a href="#" data-text="&nbsp;Contact">&nbsp;Contact&nbsp;</a>
+                    </li>
+                  </ul>
+            </div>
+             
+        </div>
+        <div class="main-body">
         <!-- Banner image -->
         <div class="header">
             <div class="banner-text">
                 <h1 class="h1">Mark Skobelevs</h1>
+                <h2>Web Developer</h2>
             </div>
-            <div class="banner-text">
-                Web Developer
-            </div>
-            <div><a href='#container-top'>Scroll down</a></div>
-        </div>
-        <!-- Sticky side bar -->
-        <div class="sidebar hidden-xs">
-            <div class="top-left-initials">
-                MS
-            </div>
-            <div><a href="#">About Me</a></div>
-            <div><a href="#">My Portfolio</a></div>
-            <div><a href="#">Coding Examples</a></div>
-            <div><a href="#">SCS Scheme</a></div>
-            <div><a href="#">Contact Me</a></div>
 
+    
+
+
+            <div><a href='#container-top' class="scroll-down">Scroll down</a></div>
         </div>
+
         <!-- Projects -->
         <div class="container" id="container-top">
             <div class="h2"><h2>My Portfolio</h2> </div>
                <div class="project-grid">   
              
                     <div class="project-grid-col-1">
-                        <div class="project-1 project-container">
+                        <div class="project-1 article-container">
                         
                             <div class="contents-container">
                                 <div class="project-image"><img src="styles/images/netmatters.png" alt="placeholder"></div>
@@ -54,7 +71,7 @@
                         </div>
                     </div>
                     <div class="project-grid-col-2">
-                        <div class="project-2 project-container">
+                        <div class="project-2 article-container">
                             Project 2
                             <div class="contents-container">
                                 <div class="project-image"><img src="styles/images/placeholder.jpg" alt="placeholder">   </div>
@@ -63,7 +80,7 @@
                         </div>
                     </div>     
                     <div class="project-grid-col-3">
-                        <div class="project-3 project-container">
+                        <div class="project-3 article-container">
                             Project 3
                             <div class="contents-container">
                                 <div class="project-image"><img src="styles/images/placeholder.jpg" alt="placeholder">   </div>
@@ -72,7 +89,7 @@
                         </div>
                     </div>     
                     <div class="project-grid-col-1">
-                        <div class="project-4 project-container">
+                        <div class="project-4 article-container">
                             Project 4
                             <div class="contents-container">
                                 <div class="project-image"><img src="styles/images/placeholder.jpg" alt="placeholder">   </div>
@@ -81,7 +98,7 @@
                         </div>
                     </div>   
                     <div class="project-grid-col-2">
-                        <div class="project-5 project-container">
+                        <div class="project-5 article-container">
                             Project 5
                             <div class="contents-container">
                                 <div class="project-image"><img src="styles/images/placeholder.jpg" alt="placeholder">   </div>
@@ -90,7 +107,7 @@
                             </div>
                         </div>   
                         <div class="project-grid-col-3">
-                            <div class="project-6 project-container">
+                            <div class="project-6 article-container">
                                 Project 6
                                 <div class="contents-container">
                                     <div class="project-image"><img src="styles/images/placeholder.jpg" alt="placeholder">   </div>
@@ -100,15 +117,15 @@
                     </div>   
         
                 </div>  
-        </div>
+        
         <!-- Form -->
-        <div class="container">
+        <div class="contact-container ">
             <div class="get-in-touch">
                 <h3>Get In Touch</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur repellendus autem, suscipit iure beatae corrupti!</p>
+                <p> You are welcome to reach out to me either by phone,email or by using the form below. I'll get back to you as soon as possible.</p>
                 <h4>0000-0000-000</h4>
                 <h5>mark-skobelevs@netmatters-scs.com</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil optio numquam quos voluptas. Obcaecati, accusantium alias saepe, ad eaque facilis voluptatem sapiente laudantium deserunt possimus excepturi quibusdam, modi eveniet facere!</p>
+         
             </div>
             <div class="leave-a-message">
                 <form class="form-field">
@@ -116,17 +133,28 @@
                     <input type="text" class="input-field" placeholder="Last Name*">
                     <input type="text" class="input-field" placeholder="Email Address*">
                     <input type="text" class="input-field" placeholder="Subject">
-                    <textarea type="text" class="input-field" placeholder="Message"></textarea>
+                    <textarea  class="input-field" placeholder="Message"  ></textarea>
                     <!-- submit button - gotta CSS  -->
-                    <span> Submit</span>
+                    <span id="submit"> Submit</span>
                 </form>
             </div>
         </div>
 
-
+        <div class="circle-1">
+            <div class="circle-2">  
+                <div class="circle-3">
+                    <div class="circle-4">
+                        <div class="circle-5">
+                            <div class="circle-6">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
-    
-
+</div>
+</div> 
 </body>
 </html>
