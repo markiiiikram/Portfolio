@@ -5,6 +5,7 @@
 }
 .project-grid{
     gap:30px;
+ 
 }
 // .project-1, .project-2,
 // .project-3, .project-4,
@@ -50,11 +51,11 @@
 }
 
 
-@media (min-width:450px){
-    .project-grid{
-        width:80%;
-    }
-}
+// @media (min-width:450px){
+//     .project-grid{
+//         width:80%;
+//     }
+// }
 @media (min-width:768px) and (max-width:1260px){
     .project-grid{
         grid-template-columns: 1fr 1fr;

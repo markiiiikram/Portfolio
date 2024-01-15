@@ -1,39 +1,11 @@
-.nav-bar {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-ul li {
-  position: relative;
-  list-style: none;
-}
-ul li a {
-  font-size: 3em;
-  text-decoration: none;
-  letter-spacing: 2px;
-  line-height: 1em;
-  text-transform: uppercase;
-  color: transparent;
-  -webkit-text-stroke: 1px rgb(255, 255, 255);
-}
-ul li a::before {
-  content: attr(data-text);
-  position: absolute;
-  color: var(--clr);
-  width: 0;
-  overflow: hidden;
-  transition: 1s;
-  border-right: 8px solid var(--clr);
-  -webkit-text-stroke: 1px var(--clr);
-}
-ul li a:hover::before {
-  width: 100%;
-  filter: drop-shadow(0 0 25px var(--clr));
-}
 
 #submit{
-  background-color:red;
-  width:50%;
+  display:block;
+  background-color:white;
+  line-height:3;
+  width:150px;
   justify-self: center;
+  color:black;
+  border-radius:3px;
+  @include center;
 }

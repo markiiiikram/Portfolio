@@ -38,51 +38,20 @@ a {
   }
   .main-body {
     grid-column: 2/3;
+    width: 100%;
   }
 }
 
-.nav-bar {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-ul li {
-  position: relative;
-  list-style: none;
-}
-
-ul li a {
-  font-size: 3em;
-  text-decoration: none;
-  letter-spacing: 2px;
-  line-height: 1em;
-  text-transform: uppercase;
-  color: transparent;
-  -webkit-text-stroke: 1px white;
-}
-
-ul li a::before {
-  content: attr(data-text);
-  position: absolute;
-  color: var(--clr);
-  width: 0;
-  overflow: hidden;
-  transition: 1s;
-  border-right: 8px solid var(--clr);
-  -webkit-text-stroke: 1px var(--clr);
-}
-
-ul li a:hover::before {
-  width: 100%;
-  filter: drop-shadow(0 0 25px var(--clr));
-}
-
 #submit {
-  background-color: red;
-  width: 50%;
+  display: block;
+  background-color: white;
+  line-height: 3;
+  width: 150px;
   justify-self: center;
+  color: black;
+  border-radius: 3px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .header {
@@ -90,8 +59,13 @@ ul li a:hover::before {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #66fcf1;
+  color: #FAF9F6;
   height: 100vh;
+  width: 100%;
+  background-image: url("../images/triangles.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-text-stroke: 1px black;
 }
 
 .project-grid > .h1 {
@@ -107,7 +81,12 @@ ul li a:hover::before {
 .h1 {
   font-size: 5rem;
   overflow-wrap: break-word;
-  color: #66fcf1;
+}
+
+.h1 {
+  -webkit-text-stroke: 1px black;
+  color: white;
+  text-shadow: 4px 5px 0 #c5c6c7;
 }
 
 .scroll-down {
@@ -167,12 +146,6 @@ ul li a:hover::before {
   padding: 5px;
 }
 
-@media (min-width: 450px) {
-  .project-grid {
-    width: 80%;
-  }
-}
-
 @media (min-width: 768px) and (max-width: 1260px) {
   .project-grid {
     grid-template-columns: 1fr 1fr;
@@ -198,6 +171,15 @@ ul li a:hover::before {
   gap: 30px;
 }
 
+@media (min-width: 1260px) {
+  .scs-scheme-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .scs-scheme-grid .scs-scheme-3 {
+    grid-column: span 2;
+  }
+}
+
 .hidden-xs {
   display: none;
 }
@@ -220,6 +202,45 @@ ul li a:hover::before {
   border: 3px solid #0b0c10;
   border-left: 0;
   left: 1px;
+  white-space: nowrap;
+}
+
+.nav-bar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+ul li {
+  position: relative;
+  list-style: none;
+}
+
+ul li a {
+  font-size: 1.3rem;
+  text-decoration: none;
+  letter-spacing: 3px;
+  line-height: 5rem;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+}
+
+ul li a::before {
+  content: attr(data-text);
+  position: absolute;
+  color: var(--clr);
+  width: 0;
+  overflow: hidden;
+  transition: 1s;
+  border-right: 5px solid var(--clr);
+  -webkit-text-stroke: 1px var(--clr);
+}
+
+ul li a:hover::before {
+  width: 100%;
+  filter: drop-shadow(0 0 5px var(--clr));
 }
 
 @media (min-width: 992px) {
@@ -308,35 +329,56 @@ ul li a:hover::before {
   }
 }
 
+@media (orientation: landscape) {
+  .top-left-initials {
+    margin-bottom: 50px;
+  }
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
   width: 80%;
 }
 
+.container .h2 {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
 .container-h3 > h3 {
-  margin: 0px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.viewlink-click {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.contact-container {
+  margin-top: 30px;
+}
+
+.article-container {
+  font-size: 1.1rem;
 }
 
 @media (min-width: 992px) {
   .contact-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding: 30px;
   }
-}
-
-@media (min-width: 1260px) {
-  .get-in-touch, .leave-a-message {
-    grid-column: 1/3;
+  .contact-container .get-in-touch p {
+    padding: 15px;
   }
 }
 
 @media (min-width: 1450px) {
   .container {
     width: 1200px;
-  }
-  .project-grid, .contact-container {
-    padding: 30px;
   }
   .form-field .input-field {
     width: 49%;
@@ -347,7 +389,7 @@ ul li a:hover::before {
 }
 
 .get-in-touch, .leave-a-message {
-  width: 80%;
+  padding-top: 0px;
   margin-left: auto;
   margin-right: Auto;
 }
@@ -357,7 +399,8 @@ ul li a:hover::before {
   border: 1px solid transparent;
   border-radius: 4px;
   margin-top: 10px;
-  padding: 15px 20px;
+  padding: 15px 33px;
+  margin: 10px 0px;
   background-color: #FAF9F6;
 }
 
@@ -374,12 +417,4 @@ ul li a:hover::before {
 #submit {
   grid-column: span 2;
   align-self: center;
-}
-
-@media (min-width: 1260px) {
-  .leave-a-message {
-    display: inline-flex;
-    justify-content: center;
-    width: 750px;
-  }
 }

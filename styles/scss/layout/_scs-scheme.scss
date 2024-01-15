@@ -3,3 +3,15 @@
     grid-template-columns: 1fr;
     gap:30px;
 }
+
+@media (min-width:1260px){
+    .scs-scheme-grid{
+        grid-template-columns:1fr 1fr;
+    }
+    .scs-scheme-grid{
+        .scs-scheme-3{
+            grid-column: span 2;
+        }
+
+    }
+}
