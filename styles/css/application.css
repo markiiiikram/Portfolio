@@ -30,6 +30,7 @@ body {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 body::-webkit-scrollbar {
@@ -84,7 +85,7 @@ body::-webkit-scrollbar-thumb {
   color: #FAF9F6;
   height: 100vh;
   width: 100%;
-  background-image: url("../images/triangles.png");
+  background-image: url("../../images/triangles.png");
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-text-stroke: 1px black;
@@ -117,7 +118,15 @@ body::-webkit-scrollbar-thumb {
   font-weight: 500;
   color: #fff;
   font-size: 36px;
-  line-height: 5;
+}
+
+@media (max-width: 375px) {
+  .h1 {
+    font-size: 40px;
+  }
+  .scroll-down {
+    font-size: 20px;
+  }
 }
 
 .project-grid, .project-container {
@@ -138,6 +147,7 @@ body::-webkit-scrollbar-thumb {
 
 .project-text {
   font-size: 1.3rem;
+  font-weight: 300;
 }
 
 .tags {
@@ -185,6 +195,18 @@ body::-webkit-scrollbar-thumb {
   gap: 30px;
 }
 
+.image {
+  max-width: 200px;
+  max-height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
+}
+
+.h2-scs {
+  margin-bottom: 50px !important;
+}
+
 @media (min-width: 1260px) {
   .scs-scheme-grid {
     grid-template-columns: 1fr 1fr;
@@ -203,6 +225,19 @@ body::-webkit-scrollbar-thumb {
   margin-bottom: 50px;
 }
 
+.about-me-text {
+  padding: 30px;
+  text-align: left;
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+@media (max-width: 450px) {
+  .about-me-text {
+    font-size: 1.1rem;
+  }
+}
+
 .hidden-xs {
   display: none;
 }
@@ -210,9 +245,11 @@ body::-webkit-scrollbar-thumb {
 .top-left-initials {
   font-size: 6.25rem;
   line-height: 1;
-  flex-grow: 1;
-  margin-bottom: 135%;
   text-align: center;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  color: #fff;
+  border-bottom: 3px solid #fff;
 }
 
 .sidebar {
@@ -266,6 +303,15 @@ ul li a:hover::before {
   filter: drop-shadow(0 0 5px var(--clr));
 }
 
+@media (orientation: landscape) and (min-height: 600px) and (max-height: 800px) {
+  .nav-bar {
+    gap: 0px;
+  }
+  .top-left-initials {
+    margin-bottom: 0px;
+  }
+}
+
 @media (min-width: 992px) {
   .sidebar-content {
     text-align: left;
@@ -273,89 +319,6 @@ ul li a:hover::before {
   .hidden-xs {
     display: block;
     position: fixed;
-  }
-  .circle-1 {
-    display: block;
-    position: absolute;
-    height: 100vh;
-    width: 1500px;
-    top: 1px;
-    border-radius: 50vh;
-    z-index: -10;
-    display: none;
-    left: 99%;
-    text-align: right;
-    border-radius: 50vh;
-    background-color: #c5c6c7;
-    rotate: 180deg;
-    right: -100%;
-  }
-  .circle-2 {
-    display: block;
-    position: absolute;
-    height: 100vh;
-    width: 1500px;
-    top: 1px;
-    border-radius: 50vh;
-    z-index: -10;
-    display: none;
-    background-color: #45a29e;
-    right: 3%;
-  }
-  .circle-3 {
-    display: block;
-    position: absolute;
-    height: 100vh;
-    width: 1500px;
-    top: 1px;
-    border-radius: 50vh;
-    z-index: -10;
-    display: none;
-    background-color: #1f2833;
-    right: 3%;
-  }
-  .circle-4 {
-    display: block;
-    position: absolute;
-    height: 100vh;
-    width: 1500px;
-    top: 1px;
-    border-radius: 50vh;
-    z-index: -10;
-    display: none;
-    background-color: #c5c6c7;
-    right: 3%;
-  }
-  .circle-5 {
-    display: block;
-    position: absolute;
-    height: 100vh;
-    width: 1500px;
-    top: 1px;
-    border-radius: 50vh;
-    z-index: -10;
-    display: none;
-    background-color: #45a29e;
-    right: 3%;
-  }
-  .circle-6 {
-    display: block;
-    position: absolute;
-    height: 100vh;
-    width: 1500px;
-    top: 1px;
-    border-radius: 50vh;
-    z-index: -10;
-    display: none;
-    background-color: #1f2833;
-    right: 3%;
-  }
-}
-
-@media (orientation: landscape) {
-  .top-left-initials {
-    margin-bottom: 50px;
-    color: #fff;
   }
 }
 
@@ -388,10 +351,11 @@ ul li a:hover::before {
 .viewlink-click {
   margin-top: 10px;
   margin-bottom: 20px;
+  display: flex;
 }
 
 .contact-container {
-  margin-top: 100px;
+  margin-top: 120px;
   border-top: 3px solid #fff;
 }
 
@@ -425,6 +389,10 @@ ul li a:hover::before {
   height: 100%;
 }
 
+.contents-container .viewlink {
+  line-height: 36px;
+}
+
 .container-text {
   padding-right: 15px;
   padding-left: 15px;
@@ -445,7 +413,6 @@ ul li a:hover::before {
 @media (min-width: 1450px) {
   .container {
     width: 1200px;
-    height: 100vh;
   }
   .form-field .input-field {
     width: 49%;
@@ -463,6 +430,19 @@ ul li a:hover::before {
 
 .get-in-touch {
   margin-bottom: 50px;
+}
+
+.get-in-touch h3 {
+  font-size: 1.6rem;
+}
+
+.get-in-touch h4 {
+  font-size: 1.4rem;
+}
+
+.get-in-touch h5 {
+  margin-top: 5px;
+  font-size: 1.4rem;
 }
 
 .input-field {
@@ -488,4 +468,66 @@ ul li a:hover::before {
 #submit {
   grid-column: span 2;
   align-self: center;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("../../styles/fonts/icomoon.eot?lmxqjb");
+  src: url("../../styles/fonts/icomoon.eot?lmxqjb#iefix") format("embedded-opentype"), url("../../styles/fonts/icomoon.ttf?lmxqjb") format("truetype"), url("../../styles/fonts/icomoon.woff?lmxqjb") format("woff"), url("../../styles/fonts/icomoon.svg?lmxqjb#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-github:before {
+  content: "\e904";
+}
+
+.icon-linkedin:before {
+  content: "\e905";
+}
+
+.icon-brand:before {
+  content: "\e905";
+}
+
+.icon-social:before {
+  content: "\e905";
+}
+
+.icon-menu:before {
+  content: "\e908";
+}
+
+.icon-arrow-right1:before {
+  content: "\e902";
+}
+
+.icon-arrow-left1:before {
+  content: "\e903";
+}
+
+.icon-arrow-up-thick:before {
+  content: "\e901";
+}
+
+.icon-arrow-down-thick:before {
+  content: "\e900";
+}
+
+.icon-arrow-right1 {
+  font-size: 40px;
 }

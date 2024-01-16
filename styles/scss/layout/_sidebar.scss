@@ -19,9 +19,11 @@
 .top-left-initials{
     font-size:6.25rem;
     line-height:1;
-    flex-grow:1;
-    margin-bottom:135%;
     text-align:center;
+    padding-bottom:50px;
+    padding-top:50px;
+    color: $white;
+    border-bottom: 3px solid $white;
 }
 
 .sidebar{
@@ -69,7 +71,15 @@ ul li {
         width: 100%;
         filter: drop-shadow(0 0 5px var(--clr));
  }
-      
+@media (orientation: landscape) and (min-height:600px) and (max-height:800px){
+    .nav-bar{
+        gap:0px;
+    }
+    .top-left-initials{
+        margin-bottom: 0px;
+    }
+}
+ 
 @media (min-width:992px){
 
 
@@ -82,50 +92,14 @@ ul li {
         display:block;
         position:fixed;
     }
-
-    .circle-1{
-         @include circles();
-        left:99%;
-        text-align:right;
-        border-radius:50vh;
-        background-color:$grey-light;
-        rotate:180deg;
-        right:-100%;
-    }
-    .circle-2{
-        @include circles();
-        background-color:$blue-dark;
-        right:3%;
-    }
-    .circle-3{
-        @include circles();
-        background-color:$grey-dark;
-        right:3%;
-    }
-    .circle-4{
-        @include circles();
-        background-color:$grey-light;
-        right:3%;
-    }
-    .circle-5{
-        @include circles();
-        background-color:$blue-dark;
-        right:3%;
-    }
-    .circle-6{
-        @include circles();
-        background-color:$grey-dark;
-        right:3%;
-    }
-   
-    }
-
-@media (orientation: landscape){
-    .top-left-initials{
-        margin-bottom:50px;
-        color: $white;
-    }
 }
+
+// @media (orientation: landscape){
+//     .top-left-initials{
+//         margin-bottom:50px;
+//         color: $white;
+//     }
+// }
 
 // .nav{
 //     &__list{

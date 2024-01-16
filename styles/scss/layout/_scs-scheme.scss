@@ -4,6 +4,17 @@
     gap:30px;
 }
 
+.image{
+    max-width: 200px;
+    max-height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+}
+
+.h2-scs{
+    margin-bottom:50px !important;
+}
 @media (min-width:1260px){
     .scs-scheme-grid{
         grid-template-columns:1fr 1fr;

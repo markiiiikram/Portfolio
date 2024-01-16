@@ -1,0 +1,11 @@
+.about-me-text{
+    padding:30px;
+    text-align:left;
+    font-size: 1.4rem;
+    font-weight:300;
+}
+@media (max-width:450px){
+    .about-me-text{
+        font-size: 1.1rem;
+    }  
+}
