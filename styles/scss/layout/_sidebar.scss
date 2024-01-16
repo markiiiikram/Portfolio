@@ -80,9 +80,26 @@ ul li {
         margin-bottom: 0px;
     }
 }
- 
-@media (min-width:992px){
+.burger-button{
+    position: fixed;
+    right: 5%;
+    top: 5%;
+    z-index: 1;
+}
+.icon-menu:before{
+    background-color: rgba(255,255,255,0.9);
+    position: relative;
+    padding: 25px;
+    font-size: 30px;
+    border-radius: 50%;
+    color:$black;
+}
 
+
+@media (min-width:992px){
+    .burger-button{
+        display:none;
+    }
 
     .sidebar-content{
         text-align: left;

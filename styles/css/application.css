@@ -312,7 +312,26 @@ ul li a:hover::before {
   }
 }
 
+.burger-button {
+  position: fixed;
+  right: 5%;
+  top: 5%;
+  z-index: 1;
+}
+
+.icon-menu:before {
+  background-color: rgba(255, 255, 255, 0.9);
+  position: relative;
+  padding: 25px;
+  font-size: 30px;
+  border-radius: 50%;
+  color: #0b0c10;
+}
+
 @media (min-width: 992px) {
+  .burger-button {
+    display: none;
+  }
   .sidebar-content {
     text-align: left;
   }
@@ -435,6 +454,8 @@ ul li a:hover::before {
 
 .get-in-touch {
   margin-bottom: 50px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .get-in-touch h3 {
