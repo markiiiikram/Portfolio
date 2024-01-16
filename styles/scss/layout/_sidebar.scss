@@ -29,9 +29,9 @@
     top:1px;
     line-height:5;
     height:100vh;
-    background-color:$grey-light;
+    background-color:$grey-main;
     width:250px;
-    border:3px solid $black;
+    border-right:3px solid $white;
     border-left:0;
     left:1px;
     white-space: nowrap;
@@ -52,7 +52,7 @@ ul li {
     letter-spacing: 3px;
     line-height: 5rem;
     text-transform: uppercase;
-    color: transparent;
+    color: $white;
     -webkit-text-stroke: 1px rgb(255, 255, 255);
       }
  ul li a::before {
@@ -61,7 +61,7 @@ ul li {
     color: var(--clr);
     width: 0;
     overflow: hidden;
-    transition: 1s;
+    transition: .6s;
     border-right: 5px solid var(--clr);
     -webkit-text-stroke: 1px var(--clr);
  }
@@ -123,6 +123,7 @@ ul li {
 @media (orientation: landscape){
     .top-left-initials{
         margin-bottom:50px;
+        color: $white;
     }
 }
 

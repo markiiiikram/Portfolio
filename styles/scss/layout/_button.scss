@@ -8,4 +8,9 @@
   color:black;
   border-radius:3px;
   @include center;
+  cursor: pointer;
+}
+
+#submit:hover{
+  background-color: $off-white;
 }

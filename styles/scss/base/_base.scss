@@ -18,6 +18,10 @@
     margin-left:auto;
     margin-right:auto;
 }
+@mixin paddingRL15{
+    padding-right:15px;
+    padding-left:15px;
+}
 html{
     scroll-behavior: smooth;
 }
@@ -35,6 +39,8 @@ body{
     margin:0px;
     padding:0px;
     scroll-behavior: smooth;
+    letter-spacing: .1rem;
+   
 }
 
 a{
