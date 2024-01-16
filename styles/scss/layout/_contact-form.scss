@@ -7,7 +7,7 @@
 .get-in-touch{
     margin-bottom:50px;
 }
-.get-in-touch{
+.get-in-touch {
     h3{
         font-size:1.6rem;
     }
@@ -17,6 +17,7 @@
     h5{
         margin-top: 5px;
         font-size: 1.4rem;
+        word-break: break-all;
     }
 }
 .input-field{
@@ -41,7 +42,13 @@
     grid-column:span 2;
     align-self:center;
 }
-@media (min-width:768px){
+@media (max-width:991px){
+    .get-in-touch{
+        padding-top: 50px;
+        h3{
+            padding-bottom: 20px;
+        }
+    }
 
 }
 @media (min-width:1260px){
