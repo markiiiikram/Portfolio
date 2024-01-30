@@ -9,11 +9,16 @@
     <link rel="icon" type="image/png" href="images/favicon-32x32.png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/css/application.css">
+    <link rel="stylesheet" href="javascript/main.js">
 </head>
 <body>   
    <div class="grid">
-        <div class="sidebar hidden-xs">
-            <div class="sidebar-content">
+        <div class="sidebar hidden-xs" id="sidebar">
+           <button class="hamburger" id="hamburger" onclick="show()">
+                <span class="burger-top"></span>
+                <span class="burger-middle"></span>
+                <span class="burger-bottom"></span>
+           </button>
                 <a href="index.html"><div class="top-left-initials">
                     MS
                     </div>
@@ -34,22 +39,22 @@
                     <li style="--clr:#FE8E3D">
                       <a href="#contact" data-text="&nbsp;Contact">&nbsp;Contact&nbsp;</a>
                     </li>
-                  </ul>
-            </div>
-             
+                </ul>
+            
+           
         </div>
-     
+        
         <div class="main-body">
         <!-- Banner image -->
         <div class="header" id="header">
          
             <div class="banner-text">
-                <h1 class="h1">Mark Skobelevs</h1>
-                <h2>Web Developer</h2>
+                <h1 class="h1" id="banner-header">Mark Skobelevs</h1>
+                <h2 class="banner-sub-header"> Web Developer</h2>
             </div>
 
-            <div class="burger-button"><span class="icon-menu"></span></div>
-
+          
+            <!-- <div class="burger-button"><span class="icon-menu"></span></div> -->
 
             <div class="scroll-container"><a href='#container-top' class="scroll-down">Scroll down <br><span class="icon-arrow-down-thick"></span></a></div>
             
@@ -132,14 +137,15 @@
          
             </div>
             <div class="leave-a-message">
-                <form class="form-field">
-                    <input type="text" class="input-field" placeholder="First Name*">
-                    <input type="text" class="input-field" placeholder="Last Name*">
-                    <input type="text" class="input-field" placeholder="Email Address*">
+                <div id="error"></div>
+                <form class="form-field" id="form">
+                    <input type="text" class="input-field" id="name" placeholder="First Name*" >
+                    <input type="text" class="input-field" id="surname" placeholder="Last Name*" >
+                    <input type="text" class="input-field" id="email" placeholder="Email Address*" >
                     <input type="text" class="input-field" placeholder="Subject">
                     <textarea  class="input-field" placeholder="Message"  ></textarea>
                     <!-- submit button - gotta CSS  -->
-                    <a><span id="submit"> Submit</span></a>
+                    <button id="submit"> Submit</button>
                 </form>
             </div>
         </div>
@@ -149,5 +155,7 @@
     </div>
 </div>
 </div> 
+<script src="javascript/jQuery-3.7.1.min.js"></script>
+<script src="javascript/main.js"></script>
 </body>
 </html>

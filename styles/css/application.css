@@ -216,12 +216,53 @@ body::-webkit-scrollbar-thumb {
 }
 
 .coding-container {
-  height: 100vh;
+  min-height: 100vh;
   margin-bottom: 50px;
+  padding: 15px;
 }
 
 .coding-1 {
   margin-bottom: 50px;
+}
+
+.image-code {
+  padding: 15px;
+}
+
+.button-example {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.coding-1 {
+  text-align: center;
+  justify-content: center;
+  background-color: #F4F5FA;
+  font-size: 30px;
+  border: 3px solid #FFA500;
+  padding: 5px;
+  box-shadow: rgba(255, 165, 0, 0.3) 0px 0px 30px 4px;
+  color: black;
+  top: 0;
+  height: 100%;
+  border-radius: 10px;
+}
+
+@media (min-width: 1260px) {
+  .button-example {
+    width: 40%;
+    float: left;
+    margin-right: 15px;
+    padding-top: 40px;
+  }
+  .project-text {
+    margin-top: 15px;
+    text-align: start;
+    border-top: 3px solid #c5c6c7;
+    border-bottom: 3px solid #c5c6c7;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
 }
 
 .about-me-text {
@@ -237,10 +278,6 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-.hidden-xs {
-  display: none;
-}
-
 .top-left-initials {
   font-size: 6.25rem;
   line-height: 1;
@@ -252,7 +289,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .sidebar {
-  position: absolute;
+  position: fixed;
   top: 1px;
   line-height: 5;
   height: 100vh;
@@ -260,8 +297,61 @@ body::-webkit-scrollbar-thumb {
   width: 250px;
   border-right: 3px solid #fff;
   border-left: 0;
-  left: 1px;
+  left: -300px;
   white-space: nowrap;
+  transition: 0.4s;
+  z-index: 2;
+}
+
+#sidebar.active {
+  left: 0px;
+}
+
+.sidebar .hamburger {
+  position: fixed;
+  top: 30px;
+  right: 20px;
+  display: block;
+  z-index: 999;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  width: 80px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+}
+
+.hamburger span {
+  width: 50px;
+  height: 4px;
+  line-height: 5px;
+  background: #000;
+  display: block;
+  margin-top: 4px;
+  position: absolute;
+  transition: transform 0.6s, opacity .8s, top .6s;
+}
+
+.burger-top {
+  top: 25%;
+}
+
+.burger-bottom {
+  top: 75%;
+}
+
+.hamburger.active .burger-top {
+  transform: rotate(-315deg);
+  top: 50%;
+}
+
+.hamburger.active .burger-middle {
+  transform: rotate(-315deg);
+}
+
+.hamburger.active .burger-bottom {
+  transform: rotate(-225deg);
+  top: 50%;
 }
 
 .nav-bar {
@@ -312,13 +402,6 @@ ul li a:hover::before {
   }
 }
 
-.burger-button {
-  position: fixed;
-  right: 5%;
-  top: 5%;
-  z-index: 1;
-}
-
 .icon-menu:before {
   background-color: rgba(255, 255, 255, 0.9);
   position: relative;
@@ -329,11 +412,11 @@ ul li a:hover::before {
 }
 
 @media (min-width: 992px) {
-  .burger-button {
+  .hamburger, .hamburger span {
     display: none;
   }
-  .sidebar-content {
-    text-align: left;
+  .sidebar {
+    left: 0px;
   }
   .hidden-xs {
     display: block;
@@ -397,9 +480,9 @@ ul li a:hover::before {
   box-shadow: rgba(255, 165, 0, 0.3) 0px 0px 30px 4px;
   color: black;
   top: 0;
-  transition: .5s;
   height: 100%;
   border-radius: 10px;
+  transition: .5s;
 }
 
 .article-container:hover {

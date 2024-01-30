@@ -12,9 +12,9 @@
     flex-basis:200px;
     flex-grow:1;
 }
-.hidden-xs{
-    display:none;
-}
+// .hidden-xs{
+//     display:none;
+// }
 
 .top-left-initials{
     font-size:6.25rem;
@@ -27,7 +27,7 @@
 }
 
 .sidebar{
-    position:absolute;
+    position:fixed;
     top:1px;
     line-height:5;
     height:100vh;
@@ -35,8 +35,54 @@
     width:250px;
     border-right:3px solid $white;
     border-left:0;
-    left:1px;
+    left:-300px;
     white-space: nowrap;
+    transition:0.4s;
+    z-index:2;
+}
+#sidebar.active{
+    left:0px;
+}
+.sidebar .hamburger{
+    position: fixed;
+    top:30px;
+    right: 20px;
+    display:block;
+    z-index:999;
+    background-color: transparent;
+    border:0;
+    cursor: pointer;
+   width: 80px;
+   height: 50px;
+   transform: translate(-50%, -50%);
+}
+.hamburger span {
+    width:50px;
+    height:4px;
+    line-height: 5px;
+    background:#000;
+    display:block;
+    margin-top:4px;
+    position: absolute;
+    transition: transform 0.6s, opacity .8s, top .6s;
+}
+.burger-top{
+    top:25%
+}
+.burger-bottom{
+    top:75%
+}
+.hamburger.active .burger-top{
+    transform: rotate(-315deg);
+    top:50%;
+}
+.hamburger.active .burger-middle{
+    
+    transform: rotate(-315deg)
+}
+.hamburger.active .burger-bottom{
+    transform: rotate(-225deg);
+    top:50%;
 }
 .nav-bar {
     position: relative;
@@ -80,12 +126,13 @@ ul li {
         margin-bottom: 0px;
     }
 }
-.burger-button{
-    position: fixed;
-    right: 5%;
-    top: 5%;
-    z-index: 1;
-}
+
+// .burger-button{
+//     position: fixed;
+//     right: 5%;
+//     top: 5%;
+//     z-index: 1;
+// }
 .icon-menu:before{
     background-color: rgba(255,255,255,0.9);
     position: relative;
@@ -97,20 +144,23 @@ ul li {
 
 
 @media (min-width:992px){
-    .burger-button{
+    .hamburger , .hamburger span{
         display:none;
     }
 
-    .sidebar-content{
-        text-align: left;
-      
-
+    .sidebar{
+        left:0px;
     }
     .hidden-xs{
         display:block;
         position:fixed;
     }
 }
+
+
+
+
+
 
 // @media (orientation: landscape){
 //     .top-left-initials{

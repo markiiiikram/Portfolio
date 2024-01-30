@@ -1,7 +1,38 @@
 .coding-container{
-    height:100vh;
+    min-height:100vh;
     margin-bottom: 50px;
+    padding:15px;
 }
 .coding-1{
     margin-bottom:50px;
+}
+.image-code{
+    padding:15px;
+}
+.button-example{
+    width: 100%;
+    margin-top:30px;
+   
+}
+
+.coding-1{
+    @include containers;
+
+}
+
+@media (min-width: 1260px){
+    .button-example{
+        width:40%;
+        float: left;
+        margin-right:15px;
+        padding-top:40px;
+    }
+    .project-text{
+        margin-top:15px;
+        text-align:start;
+        border-top:3px solid $grey-light;
+        border-bottom: 3px solid $grey-light;
+        padding-bottom: 20px;
+        padding-top:20px;
+    }
 }
