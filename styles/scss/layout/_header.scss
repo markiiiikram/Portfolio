@@ -39,6 +39,15 @@ canvas {
         4px 5px 0 $grey-light,
   
 }
+.scroll-container{
+    margin-bottom: 50px;
+    margin-top: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .scroll-down{
     text-decoration: none !important;
     font-weight:500;

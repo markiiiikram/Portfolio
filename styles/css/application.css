@@ -112,6 +112,15 @@ canvas {
   text-shadow: 4px 5px 0 #c5c6c7;
 }
 
+.scroll-container {
+  margin-bottom: 50px;
+  margin-top: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .scroll-down {
   text-decoration: none !important;
   font-weight: 500;
@@ -290,7 +299,6 @@ canvas {
 
 .sidebar {
   position: fixed;
-  top: 1px;
   line-height: 5;
   height: 100vh;
   background-color: #242729;
