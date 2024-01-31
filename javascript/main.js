@@ -25,6 +25,16 @@ if (subHeaderElement) { // Simplified null check
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Hamburger rotation animation activation script
 
+function show() {
+    document.querySelectorAll('#sidebar, #hamburger').forEach(function(element) {
+      element.classList.toggle('active');
+    });
+  }
+
+
+  ///////////////////////////////////////////////////////////////////////////
+
+  
 const form = document.getElementById('form');
 const errorElement = document.getElementById('error');
 
@@ -57,3 +67,7 @@ form.addEventListener('submit', (e) => {
     errorElement.innerText = firstError;
   }
 });
+
+
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////

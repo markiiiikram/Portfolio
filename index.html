@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/css/application.css">
     <link rel="stylesheet" href="javascript/main.js">
+    <link rel="stylesheet" href="javascript/background.js">
 </head>
 <body>   
    <div class="grid">
@@ -44,22 +45,26 @@
            
         </div>
         
-        <div class="main-body">
-        <!-- Banner image -->
-        <div class="header" id="header">
-         
-            <div class="banner-text">
-                <h1 class="h1" id="banner-header">Mark Skobelevs</h1>
-                <h2 class="banner-sub-header"> Web Developer</h2>
-            </div>
-
-          
-            <!-- <div class="burger-button"><span class="icon-menu"></span></div> -->
-
+        <div class="main-body" >
+     <div class="main-header header">
+        <div class="banner-text">
+            <h1 class="h1" id="banner-header">Mark Skobelevs</h1>
+            <h2 class="banner-sub-header"> Web Developer</h2>
             <div class="scroll-container"><a href='#container-top' class="scroll-down">Scroll down <br><span class="icon-arrow-down-thick"></span></a></div>
-            
         </div>
+           <!-- Banner image -->
+        <canvas  id="c">
+         
 
+        </canvas>
+        
+    </div>
+
+      
+        <!-- <div class="burger-button"><span class="icon-menu"></span></div> -->
+
+       
+        
         <!-- Projects -->
         <div class="container" id="container-top">
             <div class="h2" id="Portfolio"><h2>My Portfolio</h2> </div>
@@ -157,5 +162,6 @@
 </div> 
 <script src="javascript/jQuery-3.7.1.min.js"></script>
 <script src="javascript/main.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/1.0.0/anime.min.js'></script><script  src="javascript/background.js"></script>
 </body>
 </html>
