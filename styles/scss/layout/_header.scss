@@ -38,12 +38,11 @@ canvas {
   
 }
 .scroll-container-top, .scroll-container-bottom{
-    margin-bottom: 50px;
-    margin-top: 50px;
+ 
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%);
 }
 .scroll-container-bottom{
     position:relative;
@@ -64,5 +63,4 @@ canvas {
     }
     
 }
-
 

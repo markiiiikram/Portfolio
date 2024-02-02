@@ -64,6 +64,8 @@
         display:grid;
         grid-template-columns: 1fr 1fr;
         padding:30px;
+        
+        margin: auto;
     }
     .contact-container .get-in-touch p{
         padding:15px;
@@ -76,7 +78,7 @@
 
 }
 @media (min-width:1450px){
-    .container{
+    .container, .contact-container{
         width:1200px;
       
     }

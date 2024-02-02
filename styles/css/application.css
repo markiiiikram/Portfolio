@@ -119,12 +119,10 @@ canvas {
 }
 
 .scroll-container-top, .scroll-container-bottom {
-  margin-bottom: 50px;
-  margin-top: 50px;
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%);
 }
 
 .scroll-container-bottom {
@@ -211,6 +209,7 @@ canvas {
   display: grid;
   grid-template-columns: 1fr;
   gap: 30px;
+  margin-bottom: 30px;
 }
 
 .image {
@@ -249,6 +248,17 @@ canvas {
   min-height: 100vh;
   margin-bottom: 50px;
   padding: 15px;
+  overflow-x: auto;
+}
+
+.coding-container h2 {
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.comment:nth-of-type(2) {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .coding-1 {
@@ -331,7 +341,7 @@ canvas {
 .sidebar {
   position: fixed;
   line-height: 5;
-  height: 100vh;
+  height: 100%;
   background-color: #242729;
   width: 280px;
   border-right: 3px solid #fff;
@@ -340,6 +350,7 @@ canvas {
   white-space: nowrap;
   transition: 0.4s;
   z-index: 2;
+  overflow-y: scroll;
 }
 
 #sidebar.active {
@@ -430,6 +441,13 @@ ul li a::before {
 ul li a:hover::before {
   width: 100%;
   filter: drop-shadow(0 0 5px var(--clr));
+}
+
+@media (max-height: 736px) {
+  .top-left-initials {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
 }
 
 @media (orientation: landscape) and (min-height: 600px) and (max-height: 800px) {
@@ -553,6 +571,7 @@ ul li a:hover::before {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 30px;
+    margin: auto;
   }
   .contact-container .get-in-touch p {
     padding: 15px;
@@ -560,7 +579,7 @@ ul li a:hover::before {
 }
 
 @media (min-width: 1450px) {
-  .container {
+  .container, .contact-container {
     width: 1200px;
   }
   .form-field .input-field {
