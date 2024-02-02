@@ -23,6 +23,10 @@
     padding-right:15px;
     padding-left:15px;
 }
+@mixin paddingTB15{
+    padding-top:15px;
+    padding-bottom:15px;
+}
 html{
     scroll-behavior: smooth;
 }

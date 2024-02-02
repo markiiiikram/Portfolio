@@ -450,12 +450,10 @@ ul li a:hover::before {
   }
 }
 
-@media (orientation: landscape) and (min-height: 600px) and (max-height: 800px) {
+@media (orientation: landscape) and (max-height: 800px) {
   .nav-bar {
     gap: 0px;
-  }
-  .top-left-initials {
-    margin-bottom: 0px;
+    overflow-y: scroll;
   }
 }
 
