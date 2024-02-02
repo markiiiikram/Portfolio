@@ -125,10 +125,12 @@ var Circle = function(opts) {
   extend(this, opts);
 }
 
+
 Circle.prototype.draw = function() {
   ctx.globalAlpha = this.opacity || 1;
   ctx.beginPath();
-  ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI, false);
+  var offsetX = window.innerWidth >= 992 ? 0 : 0;
+  ctx.arc(this.x + offsetX, this.y, this.r, 0, 4 * Math.PI, false);
   if (this.stroke) {
     ctx.strokeStyle = this.stroke.color;
     ctx.lineWidth = this.stroke.width;

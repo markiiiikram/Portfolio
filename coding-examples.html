@@ -7,9 +7,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" type="image/png" href="images/favicon-32x32.png">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/css/application.css">
     <link rel="stylesheet" href="javascript/main.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 </head>
 <body>   
    <div class="grid">
@@ -24,19 +25,19 @@
                  </div>
               </a>
              <ul class="nav-bar">
-                 <li style="--clr:#FE8E3D">
+                 <li style="--clr:#fff">
                    <a href="about-me.html"  data-text="&nbsp;About Me&nbsp;">&nbsp;About Me&nbsp;</a>
                  </li>
-                 <li style="--clr:#FE8E3D">
+                 <li style="--clr:#fff">
                    <a href="index.html" data-text="&nbsp;My Portfolio&nbsp;">&nbsp;My Portfolio&nbsp;</a>
                  </li>
-                 <li style="--clr:#FE8E3D">
+                 <li style="--clr:#fff">
                    <a href="coding-examples.html" data-text="&nbsp;Coding-examples">&nbsp;Coding-examples&nbsp;</a>
                  </li>
-                 <li style="--clr:#FE8E3D">
+                 <li style="--clr:#fff">
                    <a href="scs-scheme.html" data-text="&nbsp;SCS-SCHEME">&nbsp;Scs-Scheme&nbsp;</a>
                  </li>
-                 <li style="--clr:#FE8E3D">
+                 <li style="--clr:#fff">
                    <a href="#contact" data-text="&nbsp;Contact">&nbsp;Contact&nbsp;</a>
                  </li>
              </ul>
@@ -53,12 +54,7 @@
                 <h1 class="h1" id="banner-header">Coding Examples</h1>
        
             </div>
-
-    
-     
-
-
-            <div><a href='#container-top' class="scroll-down">Scroll down <br><span class="icon-arrow-down-thick"></span></a></div>
+            <div class="scroll-container-top"><a href='#container-top' class="scroll-down">Scroll down <br><span class="icon-arrow-down-thick"></span></a></div>
         </div>
 
         <!-- Projects -->
@@ -70,27 +66,89 @@
                         <div class="coding-1">
                         
                             <div class="coding-container">
-                                
-                                <div class="container-h3"> <h3>Example #1</h3></div>
-                                <div class="image-code">
-                                    <img src="images/button-pseudo.png" alt="button-example" class="button-example">
-                                </div>
-                                <div class="project-text"><p>This is an example of my code from Netmatters assessment. I chose this code due to the fact that it uses nesting, CSS selectors and Pseudo Elements. 
-                                </p>
-                                <br>
-                                <p>Firstly, the button  uses nesting, which creates a scope for the styles applied to the button. Any changes made to the styles will only affect elements within that specific container (.button-h).</p>
-                                <br>
-                                <p> Secondly, The code uses a specific CSS selector. It targets elements with a class attribute that starts with "icon-". The ^ symbol in the selector denotes the starting point, so it selects elements whose class attribute begins with "icon-".  </p>
-                                <br>
-                                    Lastly, the ::before pseudo-element is applied to the selected elements (those with a class starting with "icon-"). Pseudo-elements allow you to style certain parts of an element without adding extra HTML. In this case, ::before is used to apply styles before the content of each selected element.</p>
-                                </div>
-                              
+                                      <h2>Javascript</h2>
+                                <pre class="">
+                                    <code class="">
+const form = document.getElementById('form');
+const errorElement = document.createElement('div');
+errorElement.id = 'error';
+errorElement.textContent = '';
+//styling (hidden for preview) -start
+//styling -end
+// Insert errorElement before the form
+form.parentNode.insertBefore(errorElement, form);
+
+// Declare error messages in array
+form.addEventListener('submit', (e) => {
+    const inputs = [
+        { element: document.getElementById('name'), message: 'Please input your name' },
+        { element: document.getElementById('surname'), message: 'Please input your surname' },
+        { element: document.getElementById('email'), message: 'Please input a valid email' }
+    ]; 
+
+    // Declare empty variable
+    let firstError = null;
+
+    // If input is empty, show error. 
+    inputs.some(input => {
+        if (input.element.value.trim() === '') {
+            firstError = input.message;
+            return true; // Stop the loop
+        }
+        // Regex loop check for emails
+        if (input.element === document.getElementById('email')) {
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(input.element.value.trim())) {
+                firstError = 'Please input a valid email';
+                return true; // Stop the loop
+            }
+        }
+    });
+
+    // Prevent submission and display error
+    if (firstError) {
+        e.preventDefault();
+        errorElement.textContent = firstError;
+        errorElement.style.display = 'block'; // Show the error message
+    }
+});
+
+                                    </code>
+                                </pre>
+                                <div class="comment">This JavaScript snippet provides form validation on the on the contact form below. It first selects the form element and creates a div to display error messages. These messages are then placed before the form in the document structure. When the form is submitted, the script checks each input field for validation. If it finds an empty field or an invalid email address, it prevents the form from submitting and displays the corresponding error message in the created div.</div>
+                                <h2>Sass/Css</h2>
+                                <pre class="code-2"><code>
+@mixin hover-style($bg-color, $text-color, $btn-bg) {
+    &:hover {
+        background-color: $bg-color;
+        .btn-art {
+            color: $text-color;
+            background-color: $btn-bg;
+        }
+        .icon {
+            color: $text-color;
+            background-color: $btn-bg;
+        }
+    }
+}
+
+.bespoke-software {
+    @include hover-style($hoki, $hoki, $white);
+}
+
+.it-support {
+    @include hover-style($blue, $blue, $white);
+}
+                                   </code></pre>
+                                   <div class="comment"> This is a snippet of the code I used to create the hover effect for the various containers throughout Netmatters</div>
+                               </div>
+                    
                             </div>
                         </div>
                     </div>
         
                 </div>  
-        
+                
         <!-- Form -->
         <div class="contact-container" id="contact">
             <div class="get-in-touch">
@@ -121,5 +179,7 @@
 </div> 
 <script src="javascript/jQuery-3.7.1.min.js"></script>
 <script src="javascript/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/go.min.js"></script>
+<script>hljs.highlightAll();</script>
 </body>
 </html>

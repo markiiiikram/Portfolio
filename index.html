@@ -7,10 +7,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" type="image/png" href="images/favicon-32x32.png">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="styles/css/application.css">
     <link rel="stylesheet" href="javascript/main.js">
-    <link rel="stylesheet" href="javascript/background.js">
+
 </head>
 <body>   
    <div class="grid">
@@ -25,19 +26,19 @@
                     </div>
                  </a>
                 <ul class="nav-bar">
-                    <li style="--clr:#FE8E3D">
+                    <li style="--clr:#FFF">
                       <a href="about-me.html"  data-text="&nbsp;About Me&nbsp;">&nbsp;About Me&nbsp;</a>
                     </li>
-                    <li style="--clr:#FE8E3D">
+                    <li style="--clr:#FFF">
                       <a href="#Portfolio" data-text="&nbsp;My Portfolio&nbsp;">&nbsp;My Portfolio&nbsp;</a>
                     </li>
-                    <li style="--clr:#FE8E3D">
+                    <li style="--clr:#FFF">
                       <a href="coding-examples.html" data-text="&nbsp;Coding-examples">&nbsp;Coding-examples&nbsp;</a>
                     </li>
-                    <li style="--clr:#FE8E3D">
+                    <li style="--clr:#FFF">
                       <a href="scs-scheme.html" data-text="&nbsp;SCS-SCHEME">&nbsp;Scs-Scheme&nbsp;</a>
                     </li>
-                    <li style="--clr:#FE8E3D">
+                    <li style="--clr:#FFFD">
                       <a href="#contact" data-text="&nbsp;Contact">&nbsp;Contact&nbsp;</a>
                     </li>
                 </ul>
@@ -46,22 +47,22 @@
         </div>
         
         <div class="main-body" >
-     <div class="main-header header">
+     <div class="main-header header" id="header">
         <div class="banner-text">
             <h1 class="h1" id="banner-header">Mark Skobelevs</h1>
             <h2 class="banner-sub-header"> Web Developer</h2>
         </div>
-        <div class="scroll-container"><a href='#container-top' class="scroll-down">Scroll down <br><span class="icon-arrow-down-thick"></span></a></div>
+        <div class="scroll-container-top"><a href='#container-top' class="scroll-down">Scroll down <br><span class="icon-arrow-down-thick"></span></a></div>
            <!-- Banner image -->
-        <canvas  id="c">
+        <!-- <canvas  id="c">
          
 
-        </canvas>
+        </canvas> -->
         
     </div>
 
       
-        <!-- <div class="burger-button"><span class="icon-menu"></span></div> -->
+       
 
        
         
@@ -143,7 +144,7 @@
             </div>
             <div class="leave-a-message">
                 <div id="error"></div>
-                <form class="form-field" id="form">
+                <form class="form-field" name="form" id="form">
                     <input type="text" class="input-field" id="name" placeholder="First Name*" >
                     <input type="text" class="input-field" id="surname" placeholder="Last Name*" >
                     <input type="text" class="input-field" id="email" placeholder="Email Address*" >
@@ -154,7 +155,7 @@
                 </form>
             </div>
         </div>
-        <div class="scroll-container"><a href='#header' class="scroll-down"><span class="icon-arrow-up-thick"></span><br>Scroll Up </a></div>
+        <div class="scroll-container-bottom"><a href='#header' class="scroll-down"><span class="icon-arrow-up-thick"></span><br>Scroll Up </a></div>
 
 
     </div>
@@ -162,6 +163,6 @@
 </div> 
 <script src="javascript/jQuery-3.7.1.min.js"></script>
 <script src="javascript/main.js"></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/1.0.0/anime.min.js'></script><script  src="javascript/background.js"></script>
+<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/1.0.0/anime.min.js'></script><script  src="javascript/background.js"></script> -->
 </body>
 </html>

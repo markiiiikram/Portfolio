@@ -11,7 +11,15 @@
     margin-right: auto;
     padding-bottom: 20px;
 }
-
+.contents-container .viewlink{
+    line-height:36px;
+}
+.viewlink-click{
+    margin-top:10px;
+    margin-bottom:20px;
+    display:flex;
+    align-items: center;
+}
 .h2-scs{
     margin-bottom:50px !important;
 }
