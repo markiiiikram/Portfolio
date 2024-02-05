@@ -1,9 +1,8 @@
 .container{
-    @include center;
-    width:80%;
+    @include width80;
     .h2{
-        margin-top:100px;
-        margin-bottom:100px;
+        margin-top:50px;
+        margin-bottom:50px;
     }
 }
 
@@ -78,10 +77,10 @@
 
 }
 @media (min-width:1450px){
-    .container, .contact-container{
-        width:1200px;
+    // .container, .contact-container{
+    //     width:1200px;
       
-    }
+    // }
 
      .form-field .input-field{
         width:49%;

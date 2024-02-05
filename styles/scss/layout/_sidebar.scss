@@ -22,7 +22,7 @@
     line-height:5;
     height:100%;
     background-color:$grey-main;
-    width:280px;
+    width:285px;
     border-right:3px solid $white;
     border-left:0;
     left:-300px;
@@ -123,7 +123,9 @@ ul li {
         gap:0px;
         overflow-y: scroll;
     }
-
+    .top-left-initials{
+        font-size:4rem;
+    }
 }
 
 // @media (min-width:992px) and (max-width:993px){

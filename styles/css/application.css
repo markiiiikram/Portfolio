@@ -51,7 +51,7 @@ body::-webkit-scrollbar-thumb {
 
 @media (min-width: 992px) {
   .main-body {
-    width: calc(100% - 250px);
+    width: calc(100% - 285px);
     margin: 0;
     margin-left: auto;
   }
@@ -142,6 +142,15 @@ canvas {
   }
   .scroll-down {
     font-size: 20px;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 800px) {
+  #banner-header {
+    font-size: 2rem;
+  }
+  .scroll-down, .scroll-container-top {
+    font-size: 1.25rem;
   }
 }
 
@@ -343,7 +352,7 @@ canvas {
   line-height: 5;
   height: 100%;
   background-color: #242729;
-  width: 280px;
+  width: 285px;
   border-right: 3px solid #fff;
   border-left: 0;
   left: -300px;
@@ -454,6 +463,9 @@ ul li a:hover::before {
     gap: 0px;
     overflow-y: scroll;
   }
+  .top-left-initials {
+    font-size: 4rem;
+  }
 }
 
 @media (min-width: 992px) {
@@ -482,14 +494,14 @@ ul li a:hover::before {
 }
 
 .container {
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
 }
 
 .container .h2 {
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .container-h3 > h3 {
@@ -576,9 +588,6 @@ ul li a:hover::before {
 }
 
 @media (min-width: 1450px) {
-  .container, .contact-container {
-    width: 1200px;
-  }
   .form-field .input-field {
     width: 49%;
   }

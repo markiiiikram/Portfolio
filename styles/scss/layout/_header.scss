@@ -63,4 +63,12 @@ canvas {
     }
     
 }
-
+@media (orientation: landscape) and (max-height:800px){
+    #banner-header{
+        font-size: 2rem;
+    }
+    .scroll-down, .scroll-container-top{
+        font-size:1.25rem;
+    }
+  
+}
