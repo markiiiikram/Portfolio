@@ -1,126 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mark Skobelevs Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" type="image/png" href="images/favicon-32x32.png">
-    <link rel="stylesheet" href="styles/css/application.css">
-    <link rel="stylesheet" href="javascript/main.js">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github-dark.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png" />
+    <link rel="stylesheet" href="styles/css/application.css" />
+    <link rel="stylesheet" href="javascript/main.js" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github-dark.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-</head>
-<body>   
-   <div class="grid">
-    <div class="sidebar hidden-xs" id="sidebar">
+  </head>
+  <body>
+    <div class="grid">
+      <div class="sidebar hidden-xs" id="sidebar">
         <button class="hamburger" id="hamburger" onclick="show()">
-             <span class="burger-top"></span>
-             <span class="burger-middle"></span>
-             <span class="burger-bottom"></span>
+          <span class="burger-top"></span>
+          <span class="burger-middle"></span>
+          <span class="burger-bottom"></span>
         </button>
-             <a href="index.html"><div class="top-left-initials">
-                 MS
-                 </div>
-              </a>
-             <ul class="nav-bar">
-                 <li style="--clr:#fff">
-                   <a href="about-me.html"  data-text="&nbsp;About Me&nbsp;">&nbsp;About Me&nbsp;</a>
-                 </li>
-                 <li style="--clr:#fff">
-                   <a href="index.html" data-text="&nbsp;My Portfolio&nbsp;">&nbsp;My Portfolio&nbsp;</a>
-                 </li>
-                 <li style="--clr:#fff">
-                   <a href="coding-examples.html" data-text="&nbsp;Coding-examples">&nbsp;Coding-examples&nbsp;</a>
-                 </li>
-                 <li style="--clr:#fff">
-                   <a href="scs-scheme.html" data-text="&nbsp;SCS-SCHEME">&nbsp;Scs-Scheme&nbsp;</a>
-                 </li>
-                 <li style="--clr:#fff">
-                   <a href="#contact" data-text="&nbsp;Contact">&nbsp;Contact&nbsp;</a>
-                 </li>
-             </ul>
-         
-        
-     </div>
-             
+        <a href="index.html"><div class="top-left-initials">MS</div> </a>
+        <ul class="nav-bar">
+          <li style="--clr: #fff">
+            <a href="about-me.html" data-text="&nbsp;About Me&nbsp;"
+              >&nbsp;About Me&nbsp;</a
+            >
+          </li>
+          <li style="--clr: #fff">
+            <a href="index.html" data-text="&nbsp;My Portfolio&nbsp;"
+              >&nbsp;My Portfolio&nbsp;</a
+            >
+          </li>
+          <li style="--clr: #fff">
+            <a href="coding-examples.html" data-text="&nbsp;Coding-examples"
+              >&nbsp;Coding-examples&nbsp;</a
+            >
+          </li>
+          <li style="--clr: #fff">
+            <a href="scs-scheme.html" data-text="&nbsp;SCS-SCHEME"
+              >&nbsp;Scs-Scheme&nbsp;</a
+            >
+          </li>
+          <li style="--clr: #fff">
+            <a href="#contact" data-text="&nbsp;Contact">&nbsp;Contact&nbsp;</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="main-body">
+      <!-- Banner image -->
+      <div class="header" id="header">
+        <div class="banner-text">
+          <h1 class="h1" id="banner-header">Coding Examples</h1>
         </div>
-        <div class="main-body">
-        <!-- Banner image -->
-        <div class="header" id="header">
-         
-            <div class="banner-text">
-                <h1 class="h1" id="banner-header">Coding Examples</h1>
-       
-            </div>
-            <div class="scroll-container-top"><a href='#container-top' class="scroll-down">Scroll down <br><span class="icon-arrow-down-thick"></span></a></div>
+        <div class="scroll-container-top">
+          <a href="#container-top" class="scroll-down"
+            >Scroll down <br /><span class="icon-arrow-down-thick"></span
+          ></a>
         </div>
+      </div>
 
-        <!-- Projects -->
-        <div class="container" id="container-top">
-            <div class="h2"><h2>Some of the code I've used and created whilst studying</h2> </div>
-               <div class="coding-grid">   
-             
-                    <div class="coding-grid-col-1">
-                        <div class="coding-1">
-                        
-                            <div class="coding-container">
-                                      <h2>Javascript</h2>
-                                <pre class="">
+      <!-- Projects -->
+      <div class="container" id="container-top">
+        <div class="h2">
+          <h2>Some of the code I've used and created whilst studying</h2>
+        </div>
+        <div class="coding-grid">
+          <div class="coding-grid-col-1">
+            <div class="coding-1">
+              <div class="coding-container">
+                <h2>PHP - Validation</h2>
+                <pre class="">
+                    <code class="">
+                        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                            // Sanitize input
+                            $name = test_input($_POST["name"]);
+                            $email = test_input($_POST["email"]);
+                            $company_name = test_input($_POST["company_name"]);
+                            $message = test_input($_POST["message"]);
+                            $telephone = test_input($_POST["telephone"]);
+                            $marketing = isset($_POST['check-sup']) ? 1 : 0;
+                            // Validate name
+                            if (empty($name)) {
+                                $nameErr = "Name is required";
+                            }
+                            // Validate Email
+                            if (empty($email)) {
+                                $emailErr = "Email is required";
+                            } elseif (!preg_match("/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/", $email)) {
+                                $emailErr = "Invalid email format";
+                            }
+                            // Validate telephone
+                            if (empty($telephone)) {
+                                $telephoneErr = "Telephone number is required";
+                            } elseif (!preg_match("/^\d+$/", $telephone)) {
+                                $telephoneErr = "The telephone format is incorrect.";
+                            } elseif(strlen($telephone)> 15){
+                                $telephoneErr = "Telephone number is too long";
+                            }
+                            // Validate message
+                            if (strlen($message) < 5) {
+                                $messageErr = "The message must be at least 5 characters long";
+                            }
+                            // Proceed with database insertion if there are no errors
+                            if (empty($nameErr) && empty($emailErr) && empty($telephoneErr) && empty($messageErr)) {
+                                try {
+                                    include "dbCon.php";
+                                    $sql = "INSERT INTO contactus (name, company_name, email, telephone, message, marketing) VALUES (?, ?, ?, ?, ?, ?)";
+                                    $stmt = mysqli_stmt_init($conn);
+                                    if (!mysqli_stmt_prepare($stmt, $sql)) {
+                                        throw new Exception(mysqli_error($conn));
+                                    }
+                                    mysqli_stmt_bind_param($stmt, "sssssi", $name, $company_name, $email, $telephone, $message, $marketing);
+                                    mysqli_stmt_execute($stmt);
+                                    mysqli_stmt_close($stmt);
+                                    mysqli_close($conn);
+                                    $successMessage = "Your Enquiry has been submitted.";
+                                } catch (Exception $e) {
+                                    echo "Error: " . $e->getMessage();
+                                }
+                            }
+                        }
+
+                    </code>
+                </pre>
+                <div class="comment">This is where my PHP goes</div>
+                <br />
+                <h2>Javascript</h2>
+                <pre class="">
                                     <code class="">
-const form = document.getElementById('form');
-const errorElement = document.createElement('div');
-errorElement.id = 'error';
-errorElement.textContent = '';
-//styling (hidden for preview) -start
-//styling -end
-// Insert errorElement before the form
-form.parentNode.insertBefore(errorElement, form);
+                                        const form = document.getElementById('form');
+                                        const errorElement = document.createElement('div');
+                                        errorElement.id = 'error';
+                                        errorElement.textContent = '';
+                                        //styling (hidden for preview) -start
+                                        //styling -end
+                                        // Insert errorElement before the form
+                                        form.parentNode.insertBefore(errorElement, form);
 
-// Declare error messages in array
-form.addEventListener('submit', (e) => {
-    const inputs = [
-        { element: document.getElementById('name'), message: 'Please input your name' },
-        { element: document.getElementById('surname'), message: 'Please input your surname' },
-        { element: document.getElementById('email'), message: 'Please input a valid email' }
-    ]; 
+                                        // Declare error messages in array
+                                        form.addEventListener('submit', (e) => {
+                                            const inputs = [
+                                                { element: document.getElementById('name'), message: 'Please input your name' },
+                                                { element: document.getElementById('surname'), message: 'Please input your surname' },
+                                                { element: document.getElementById('email'), message: 'Please input a valid email' }
+                                            ];
 
-    // Declare empty variable
-    let firstError = null;
+                                            // Declare empty variable
+                                            let firstError = null;
 
-    // If input is empty, show error. 
-    inputs.some(input => {
-        if (input.element.value.trim() === '') {
-            firstError = input.message;
-            return true; // Stop the loop
-        }
-        // Regex loop check for emails
-        if (input.element === document.getElementById('email')) {
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailPattern.test(input.element.value.trim())) {
-                firstError = 'Please input a valid email';
-                return true; // Stop the loop
-            }
-        }
-    });
+                                            // If input is empty, show error.
+                                            inputs.some(input => {
+                                                if (input.element.value.trim() === '') {
+                                                    firstError = input.message;
+                                                    return true; // Stop the loop
+                                                }
+                                                // Regex loop check for emails
+                                                if (input.element === document.getElementById('email')) {
+                                                    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                                                    if (!emailPattern.test(input.element.value.trim())) {
+                                                        firstError = 'Please input a valid email';
+                                                        return true; // Stop the loop
+                                                    }
+                                                }
+                                            });
 
-    // Prevent submission and display error
-    if (firstError) {
-        e.preventDefault();
-        errorElement.textContent = firstError;
-        errorElement.style.display = 'block'; // Show the error message
-    }
-});
+                                            // Prevent submission and display error
+                                            if (firstError) {
+                                                e.preventDefault();
+                                                errorElement.textContent = firstError;
+                                                errorElement.style.display = 'block'; // Show the error message
+                                            }
+                                        });
 
                                     </code>
                                 </pre>
-                                <div class="comment">
-                                    This JavaScript snippet facilitates form validation for the contact form below. Initially, it targets the form element and generates a div to showcase error messages. These messages are positioned ahead of the form within the document structure. Upon form submission, the script verifies each input field for validation. Should it encounter an empty field or an invalid email address, it halts the form submission and exhibits the relevant error message within the div.
-                                </div>
-                                <br>
-                                <h2>Sass/Css</h2>
-                                <pre class="code-2"><code>
+                <div class="comment">
+                  This JavaScript snippet facilitates form validation for the
+                  contact form below. Initially, it targets the form element and
+                  generates a div to showcase error messages. These messages are
+                  positioned ahead of the form within the document structure.
+                  Upon form submission, the script verifies each input field for
+                  validation. Should it encounter an empty field or an invalid
+                  email address, it halts the form submission and exhibits the
+                  relevant error message within the div.
+                </div>
+                <br />
+                <h2>Sass/Css</h2>
+                <pre class="code-2"><code>
 @mixin hover-style($bg-color, $text-color, $btn-bg) {
     &:hover {
         background-color: $bg-color;
@@ -143,48 +213,70 @@ form.addEventListener('submit', (e) => {
     @include hover-style($blue, $blue, $white);
 }
                                    </code></pre>
-                                   <div class="comment">
-                                    This is a snippet of the code I used to create the hover effect for the various containers throughout Netmatters. It is a solution that I came up with after realizing a lot of code was frequently repeated. <br><br>
-                                    This code defines a SASS mixin called "hover-style" that accepts three parameters: background color, text color, and button background color. When applied to an element, it sets the background color on hover and changes the text and button background color accordingly within that element.
-                                </div>     
-                    
-                            </div>
-                        </div>
-                    </div>
-        
-              
-                
-        <!-- Form -->
-        <div class="contact-container" id="contact">
+                <div class="comment">
+                  This is a snippet of the code I used to create the hover
+                  effect for the various containers throughout Netmatters. It is
+                  a solution that I came up with after realizing a lot of code
+                  was frequently repeated. <br /><br />
+                  This code defines a SASS mixin called "hover-style" that
+                  accepts three parameters: background color, text color, and
+                  button background color. When applied to an element, it sets
+                  the background color on hover and changes the text and button
+                  background color accordingly within that element.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form -->
+          <div class="contact-container" id="contact">
             <div class="get-in-touch">
-                <h3>Get In Touch</h3>
-                <p> You are welcome to reach out to me either by phone,email or by using the form below. I'll get back to you as soon as possible.</p>
-                <h4>0000-0000-000</h4>
-                <h5>mark-skobelevs@netmatters-scs.com</h5>
-         
+              <h3>Get In Touch</h3>
+              <p>
+                You are welcome to reach out to me either by phone,email or by
+                using the form below. I'll get back to you as soon as possible.
+              </p>
+              <h4>0000-0000-000</h4>
+              <h5>mark-skobelevs@netmatters-scs.com</h5>
             </div>
             <div class="leave-a-message">
-                <div id="error"></div>
-                <form class="form-field" id="form">
-                    <input type="text" class="input-field" id="name" placeholder="First Name*" >
-                    <input type="text" class="input-field" id="surname" placeholder="Last Name*" >
-                    <input type="text" class="input-field" id="email" placeholder="Email Address*" >
-                    <input type="text" class="input-field" placeholder="Subject">
-                    <textarea  class="input-field" placeholder="Message"  ></textarea>
-                    <!-- submit button - gotta CSS  -->
-                    <button id="submit"> Submit</button>
-                </form>
+              <div id="error"></div>
+              <form class="form-field" id="form">
+                <input
+                  type="text"
+                  class="input-field"
+                  id="name"
+                  placeholder="First Name*" />
+                <input
+                  type="text"
+                  class="input-field"
+                  id="surname"
+                  placeholder="Last Name*" />
+                <input
+                  type="text"
+                  class="input-field"
+                  id="email"
+                  placeholder="Email Address*" />
+                <input type="text" class="input-field" placeholder="Subject" />
+                <textarea class="input-field" placeholder="Message"></textarea>
+                <!-- submit button - gotta CSS  -->
+                <button id="submit">Submit</button>
+              </form>
             </div>
+          </div>
         </div>
-    </div>  
-        <div><a href='#header' class="scroll-down"><span class="icon-arrow-up-thick"></span><br>Scroll Up </a></div>
-
+        <div>
+          <a href="#header" class="scroll-down"
+            ><span class="icon-arrow-up-thick"></span><br />Scroll Up
+          </a>
+        </div>
+      </div>
     </div>
-</div>
-</div> 
-<script src="javascript/jQuery-3.7.1.min.js"></script>
-<script src="javascript/main.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/go.min.js"></script>
-<script>hljs.highlightAll();</script>
-</body>
+    <script src="javascript/jQuery-3.7.1.min.js"></script>
+    <script src="javascript/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/go.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
 </html>
