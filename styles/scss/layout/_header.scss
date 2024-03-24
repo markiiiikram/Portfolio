@@ -1,74 +1,83 @@
-.header{
-    display:flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items:center;
-    color:$off-white;
-    position: relative;
-    height:100vh;
-    width:100%;
-    background-image: url("../../images/black-ash.jpg");
-    background-repeat: no-repeat;
-    background-size:cover;
-    box-shadow: 0 5px 100px rgba(255, 255, 255, 0.25);
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  //   color: $off-white;
+  //   position: relative;
+  //   height: 100vh;
+  //   width: 100%;
+  //   background-image: url("../../images/black-ash.jpg");
+  //   background-repeat: no-repeat;
+  //   background-size: cover;
+  //   box-shadow: 0 5px 100px rgba(254, 255, 255, 0.25);
+}
+.grid {
+  color: $off-white;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: url("../../images/black-ash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 5px 100px rgba(254, 255, 255, 0.25);
 }
 canvas {
-    display: block;
-    width: 100%;
-    height: 100vh;
-  }
-.project-grid > .h1{
-    font-size:3rem;
-    color:white;
+  display: block;
+  width: 100%;
+  height: 100vh;
 }
-.banner-text{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.project-grid > .h1 {
+  font-size: 3rem;
+  color: white;
 }
-.h1{
-    font-size:5rem;
-    overflow-wrap:break-word;
-   font-family: 'Raleway' sans-serif;
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.h1{
-    color: white;
-    text-shadow: 0 0px 75px rgba(255, 255, 255, 0.5)
-  
+.h1 {
+  font-size: 5rem;
+  overflow-wrap: break-word;
+  font-family: "Raleway" sans-serif;
 }
-.scroll-container-top, .scroll-container-bottom{
- 
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%);
+.h1 {
+  color: white;
+  text-shadow: 0 0px 75px rgba(255, 255, 255, 0.5);
 }
-.scroll-container-bottom{
-    position:relative;
+.scroll-container-top,
+.scroll-container-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
 }
-.scroll-down{
-    text-decoration: none !important;
-    font-weight:500;
-    color:$white;
-    font-size:36px;
+.scroll-container-bottom {
+  position: relative;
+}
+.scroll-down {
+  text-decoration: none !important;
+  font-weight: 500;
+  color: $white;
+  font-size: 36px;
 }
 
-@media (max-width:375px){
-    .h1{
-        font-size:40px;
-    }
-    .scroll-down{
-        font-size:20px;
-    }
-    
+@media (max-width: 375px) {
+  .h1 {
+    font-size: 40px;
+  }
+  .scroll-down {
+    font-size: 20px;
+  }
 }
-@media (orientation: landscape) and (max-height:800px){
-    #banner-header{
-        font-size: 2rem;
-    }
-    .scroll-down, .scroll-container-top{
-        font-size:1.25rem;
-    }
-  
+@media (orientation: landscape) and (max-height: 800px) {
+  #banner-header {
+    font-size: 2rem;
+  }
+  .scroll-down,
+  .scroll-container-top {
+    font-size: 1.25rem;
+  }
 }

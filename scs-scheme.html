@@ -1,145 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mark Skobelevs Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" type="image/png" href="images/favicon-32x32.png">
-    <link rel="stylesheet" href="styles/css/application.css">
-
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png" />
+    <link rel="stylesheet" href="styles/css/application.css" />
+  </head>
+  <body>
     <div class="grid">
-        <div class="sidebar hidden-xs" id="sidebar">
-            <button class="hamburger" id="hamburger" onclick="show()">
-                 <span class="burger-top"></span>
-                 <span class="burger-middle"></span>
-                 <span class="burger-bottom"></span>
-            </button>
-                 <a href="index.html"><div class="top-left-initials">
-                     MS
-                     </div>
-                  </a>
-                 <ul class="nav-bar">
-                     <li style="--clr:#fff">
-                       <a href="about-me.html"  data-text="&nbsp;About Me&nbsp;">&nbsp;About Me&nbsp;</a>
-                     </li>
-                     <li style="--clr:#fff">
-                       <a href="index.html" data-text="&nbsp;My Portfolio&nbsp;">&nbsp;My Portfolio&nbsp;</a>
-                     </li>
-                     <li style="--clr:#fff">
-                       <a href="coding-examples.html" data-text="&nbsp;Coding-examples">&nbsp;Coding-examples&nbsp;</a>
-                     </li>
-                     <li style="--clr:#fff">
-                       <a href="scs-scheme.html" data-text="&nbsp;SCS-SCHEME">&nbsp;Scs-Scheme&nbsp;</a>
-                     </li>
-                     <li style="--clr:#fff">
-                       <a href="#contact" data-text="&nbsp;Contact">&nbsp;Contact&nbsp;</a>
-                     </li>
-                 </ul>
-             
-            
-         </div>
-        <div class="main-body">
+      <div class="sidebar hidden-xs" id="sidebar">
+        <button class="hamburger" id="hamburger" onclick="show()">
+          <span class="burger-top"></span>
+          <span class="burger-middle"></span>
+          <span class="burger-bottom"></span>
+        </button>
+        <a href="index.html"><div class="top-left-initials">MS</div> </a>
+        <ul class="nav-bar">
+          <li style="--clr: #fff">
+            <a href="about-me.html" data-text="&nbsp;About Me&nbsp;"
+              >&nbsp;About Me&nbsp;</a
+            >
+          </li>
+          <li style="--clr: #fff">
+            <a href="index.html" data-text="&nbsp;My Portfolio&nbsp;"
+              >&nbsp;My Portfolio&nbsp;</a
+            >
+          </li>
+          <li style="--clr: #fff">
+            <a href="coding-examples.html" data-text="&nbsp;Coding-examples"
+              >&nbsp;Coding-examples&nbsp;</a
+            >
+          </li>
+          <li style="--clr: #fff">
+            <a href="scs-scheme.html" data-text="&nbsp;SCS-SCHEME"
+              >&nbsp;Scs-Scheme&nbsp;</a
+            >
+          </li>
+          <li style="--clr: #fff">
+            <a href="#contact" data-text="&nbsp;Contact">&nbsp;Contact&nbsp;</a>
+          </li>
+        </ul>
+      </div>
+      <div class="main-body">
         <!-- Banner image -->
         <div class="header" id="header">
-         
-            <div class="banner-text">
-                <h1 class="h1" id="banner-header">SCS-Scheme</h1>
-                
-            </div>
+          <div class="banner-text">
+            <h1 class="h1" id="banner-header">SCS-Scheme</h1>
+          </div>
 
-        
-            
+          <div class="scroll-container-top">
+            <a href="#container-top" class="scroll-down"
+              >Scroll down <br /><span class="icon-arrow-down-thick"></span
+            ></a>
+          </div>
+        </div>
+        <!-- Sticky side bar -->
 
-
-
-            <div class="scroll-container-top"><a href='#container-top' class="scroll-down">Scroll down <br><span class="icon-arrow-down-thick"></span></a></div>
-
-            </div>
-            <!-- Sticky side bar -->
-    
-            <!-- Projects -->
-            <div class="container" id="container-top">
-                <div class="h2 h2-scs"><h2>Introduction to Scion Coalition Scheme</h2> 
+        <!-- Projects -->
+        <div class="container" id="container-top">
+          <div class="h2 h2-scs">
+            <h2>Introduction to Scion Coalition Scheme</h2>
+          </div>
+          <div class="intro-text">
+            <p class="intro-p">
+              The Scion Coalition Scheme is an intensive, specially tailored
+              training program run by Netmatters in order to give willing
+              candidates the opportunity to enter the industry as web
+              developers. Under the supervision of senior web developers, scions
+              generally aim to complete training within six to nine months. The
+              course is intensive and therefore the level of learning achieved
+              is extensive in a short space of time.
+            </p>
+            <a
+              target="_blank"
+              href="https://www.netmatters.co.uk/scions-coalition-scheme"
+              ><div class="viewlink">
+                <span class="viewlink-click"
+                  >Find Out More<span class="icon-arrow-right1"> </span
+                ></span></div
+            ></a>
+          </div>
+          <div class="scs-scheme-grid">
+            <div class="scs-scheme-col-1">
+              <div class="scs-scheme-1 article-container">
+                <div class="contents-container">
+                  <div class="container-h3"><h3>Treehouse</h3></div>
+                  <img
+                    src="images/treehouse.png"
+                    alt="TeamTreeHouse logo"
+                    class="image" />
+                  <div class="container-text">
+                    <p>
+                      Treehouse is an online learning community, featuring
+                      videos covering a number of topics from basic HTML to C#
+                      programming, iOS development, data analysis, and more. By
+                      completing courses users can earn points, allowing them to
+                      track their progress and see how much they've covered in
+                      certain areas.
+                    </p>
+                    <br />
+                    <!-- GO DOWNLOAD ICONS -->
+                    <a
+                      target="_blank"
+                      href="https://teamtreehouse.com/markskobelevs2"
+                      ><div class="viewlink">
+                        <span class="viewlink-click"
+                          >Check My Score<span class="icon-arrow-right1"> </span
+                        ></span></div
+                    ></a>
+                  </div>
                 </div>
-                <div class="intro-text">
-                    <p class="intro-p">The Scion Coalition Scheme is an intensive, specially tailored training program run by Netmatters in order to give willing candidates the opportunity to enter the industry as web developers. Under the supervision of senior web developers, scions generally aim to complete training within six to nine months. The course is intensive and therefore the level of learning achieved is extensive in a short space of time.</p>
-                    <a target="_blank" href="https://www.netmatters.co.uk/scions-coalition-scheme"><div class="viewlink"><span class="viewlink-click" >Find Out More<span class='icon-arrow-right1'> </span></span> </div></a>
-                </div>
-                <div class="scs-scheme-grid">   
-                
-                    
-                        <div class="scs-scheme-col-1">
-                            <div class="scs-scheme-1 article-container">
-                            
-                                <div class="contents-container">
-                                
-                                    <div class="container-h3"> <h3> Treehouse </h3></div>
-                                    <img src="images/treehouse.png" alt="TeamTreeHouse logo" class="image">
-                                    <div class="container-text"><p>Treehouse is an online learning community, featuring videos covering a number of topics from basic HTML to C# programming, iOS development, data analysis, and more. By completing courses users can earn points, allowing them to track their progress and see how much they've covered in certain areas.</p>
-                                        <br>
-                                   <!-- GO DOWNLOAD ICONS -->
-                                   <a target="_blank" href="https://teamtreehouse.com/markskobelevs2"><div class="viewlink"><span class="viewlink-click" >Check My Score<span class='icon-arrow-right1'> </span></span> </div></a>
-                                    </div>
-                                   
-                                </div>
-                            </div>
-                        </div>     
-                        <div class="scs-scheme-2 article-container">
-                            
-                            <div class="contents-container">
-                                <div class="container-h3"> <h3> About Netmatters </h3></div>
-                                <img src="images/netmatterslogo-fotor-bg-remover-2024011611259.png" alt="Netmatters logo" class="image">
-                                <div class="container-text"><p>
-                                    Established in 2008, Norfolk's leading technology company is the winner of the Princess Royal Training Award as well as the EDP Skills of Tomorrow Award. With over 80 staff members, the company operates from two locations across Norfolk. They specialize in digital marketing, website and software development, and IT support. Serving a broad spectrum of clients, the company works nationwide and adheres to strict company values.</p>
-                                    <br>
-                                </div>
-                                <!-- GO DOWNLOAD ICONS -->
-                                <a target="_blank" href="https://www.netmatters.co.uk/"><div class="viewlink"><span class="viewlink-click" >Find Out More<span class='icon-arrow-right1'> </span></span> </div></a>
-                            </div>
-                           
-                            </div>
-                        </div>
-                         
-            
-                 
-                    <div class="contact-container" id="contact">
-                        <div class="get-in-touch">
-                            <h3>Get In Touch</h3>
-                            <p> You are welcome to reach out to me either by phone,email or by using the form below. I'll get back to you as soon as possible.</p>
-                            <h4>0000-0000-000</h4>
-                            <h5>mark-skobelevs@netmatters-scs.com</h5>
-                 
-                        </div>
-                        <div class="leave-a-message">
-                            <div id="error"></div>
-                            <form class="form-field" id="form">
-                                <input type="text" class="input-field" id="name" placeholder="First Name*" >
-                                <input type="text" class="input-field" id="surname" placeholder="Last Name*" >
-                                <input type="text" class="input-field" id="email" placeholder="Email Address*" >
-                                <input type="text" class="input-field" placeholder="Subject">
-                                <textarea  class="input-field" placeholder="Message"  ></textarea>
-                                <!-- submit button - gotta CSS  -->
-                                <button id="submit"> Submit</button>
-                            </form>
-                        </div>
-                        
-                    </div> 
-        <div class="scroll-container"><a href='#header' class="scroll-down"><span class="icon-arrow-up-thick"></span><br>Scroll Up </a></div>
-
-                    </div>
-
+              </div>
             </div>
-        
-        <!-- Form -->
-        </div>              
+            <div class="scs-scheme-2 article-container">
+              <div class="contents-container">
+                <div class="container-h3"><h3>About Netmatters</h3></div>
+                <img
+                  src="images/netmatterslogo-fotor-bg-remover-2024011611259.png"
+                  alt="Netmatters logo"
+                  class="image" />
+                <div class="container-text">
+                  <p>
+                    Established in 2008, Norfolk's leading technology company is
+                    the winner of the Princess Royal Training Award as well as
+                    the EDP Skills of Tomorrow Award. With over 80 staff
+                    members, the company operates from two locations across
+                    Norfolk. They specialize in digital marketing, website and
+                    software development, and IT support. Serving a broad
+                    spectrum of clients, the company works nationwide and
+                    adheres to strict company values.
+                  </p>
+                  <br />
+                </div>
+                <!-- GO DOWNLOAD ICONS -->
+                <a target="_blank" href="https://www.netmatters.co.uk/"
+                  ><div class="viewlink">
+                    <span class="viewlink-click"
+                      >Find Out More<span class="icon-arrow-right1"> </span
+                    ></span></div
+                ></a>
+              </div>
+            </div>
+          </div>
 
+          <div class="contact-container" id="contact">
+            <div class="get-in-touch">
+              <h3>Get In Touch</h3>
+              <p>
+                You are welcome to reach out to me either by phone,email or by
+                using the form below. I'll get back to you as soon as possible.
+              </p>
+              <h4>07447-410-381</h4>
+              <h5>markskobelevs@gmail.com</h5>
+            </div>
+            <div class="leave-a-message">
+              <div id="error"></div>
+              <form class="form-field" id="form">
+                <input
+                  type="text"
+                  class="input-field"
+                  id="name"
+                  placeholder="First Name*" />
+                <input
+                  type="text"
+                  class="input-field"
+                  id="surname"
+                  placeholder="Last Name*" />
+                <input
+                  type="text"
+                  class="input-field"
+                  id="email"
+                  placeholder="Email Address*" />
+                <input type="text" class="input-field" placeholder="Subject" />
+                <textarea class="input-field" placeholder="Message"></textarea>
+                <!-- submit button - gotta CSS  -->
+                <button id="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+          <div class="scroll-container">
+            <a href="#header" class="scroll-down"
+              ><span class="icon-arrow-up-thick"></span><br />Scroll Up
+            </a>
+          </div>
+        </div>
+      </div>
 
+      <!-- Form -->
+    </div>
 
-<script src="javascript/jQuery-3.7.1.min.js"></script>
-<script src="javascript/main.js"></script>
-</body>
+    <script src="javascript/jQuery-3.7.1.min.js"></script>
+    <script src="javascript/main.js"></script>
+  </body>
 </html>
