@@ -52,41 +52,7 @@
   transform: translate(0, -30px);
   transform: scale(1.1);
 }
-.contents-container {
-  height: 100%;
-  position: relative;
-  .container-h3 {
-    color: orange;
-  }
-  .contents {
-    display: none;
-    position: absolute;
-    height: 100%;
-    top: -200px;
-    transition: 0.5s;
-    .viewlink-click {
-      background: none;
-      border: 1px solid orange;
-      font-size: 15px;
-    }
-    .viewlink-click:hover {
-      background: orange;
-    }
-  }
-}
-.contents-container:hover {
-  .contents {
-    display: block;
-    background: rgba(0, 0, 0, 0.9);
-    top: 0;
-    left: 0;
-    transition: 0.5s all ease;
-  }
-}
 
-.contents-container .viewlink {
-  line-height: 36px;
-}
 .container-text {
   @include paddingRL15;
   font-size: 1rem;
