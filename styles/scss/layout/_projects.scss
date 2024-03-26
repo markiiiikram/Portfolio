@@ -40,14 +40,12 @@
     .viewlink {
       margin: 0;
     }
-    .viewlink-click {
+    span {
       background: none;
-      border: 1px solid orange;
       font-size: 10px;
       margin: 0;
-    }
-    .viewlink-click:hover {
-      background: orange;
+      margin-left: 10px;
+      margin-right: 10px;
     }
   }
 }
@@ -66,6 +64,11 @@
 .project-text {
   font-size: 1rem;
 }
+.contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
 .contents h3 {
   margin-top: 5px;
   margin-bottom: 5px;
@@ -73,14 +76,14 @@
 }
 .contents .goToLinks {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.contents-container .viewlink {
-  line-height: 13px;
+.contents .viewlink-click {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-.goToLinks {
-  justify-content: space-around;
-}
 .icons {
   display: flex;
   font-size: 40px;
@@ -115,13 +118,17 @@
     h3 {
       font-size: 2vw;
     }
-    .goToLinks {
-      font-size: 1.5vw;
+    .goToLinks .viewlink-click {
+      font-size: 20px;
     }
-    .viewlink-click {
-      font-size: 1.3vw !important;
-      padding: 1vw;
-    }
+  }
+  .project-grid-col-2 {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .col-2 {
+    grid-column: 1;
+    grid-row: 2;
   }
 }
 /// Grid break
@@ -149,15 +156,3 @@
     font-size: 1.3vw;
   }
 }
-
-// .project-text {
-//   font-size: 1.3rem;
-//   font-weight: 300;
-// }
-// .goToLinks {
-//   display: flex;
-//   justify-content: space-evenly;
-// }
-// @media (max-width: 550px) {
-
-// }
