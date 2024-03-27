@@ -31,6 +31,7 @@
 }
 #sidebar.active {
   left: 0px;
+  overflow-y: scroll;
 }
 .sidebar .hamburger {
   position: fixed;
@@ -125,7 +126,7 @@ ul li a:hover::before {
 }
 .icon-linkedin:hover {
   color: white;
-  background-color: blue;
+  background-color: #0077b5;
 }
 .icon-github:hover {
   color: white;
@@ -173,7 +174,7 @@ ul li a:hover::before {
 @media (min-width: 992px) {
   .hamburger,
   .hamburger span {
-    display: none;
+    display: none !important;
   }
 
   .hidden-xs {

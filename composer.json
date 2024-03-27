@@ -1,0 +1,17 @@
+{
+    "name": "mark/portfolio",
+    "autoload": {
+        "psr-4": {
+            "Mark\\Portfolio\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "markiiiikram",
+            "email": "152339178+markiiiikram@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    }
+}

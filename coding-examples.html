@@ -75,37 +75,37 @@
                 <h2>PHP - Server Side Form Validation </h2>
                 <pre class="">
                     <code class="">
-                        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                            // Sanitize input
-                            $name = test_input($_POST["name"]);
-                            $email = test_input($_POST["email"]);
-                            $company_name = test_input($_POST["company_name"]);
-                            $message = test_input($_POST["message"]);
-                            $telephone = test_input($_POST["telephone"]);
-                            $marketing = isset($_POST['check-sup']) ? 1 : 0;
-                            // Validate name
-                            if (empty($name)) {
-                                $nameErr = "Name is required";
-                            }
-                            // Validate Email
-                            if (empty($email)) {
-                                $emailErr = "Email is required";
-                            } elseif (!preg_match("/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/", $email)) {
-                                $emailErr = "Invalid email format";
-                            }
-                            // Validate telephone
-                            if (empty($telephone)) {
-                                $telephoneErr = "Telephone number is required";
-                            } elseif (!preg_match("/^\d+$/", $telephone)) {
-                                $telephoneErr = "The telephone format is incorrect.";
-                            } elseif(strlen($telephone)> 15){
-                                $telephoneErr = "Telephone number is too long";
-                            }
-                            // Validate message
-                            if (strlen($message) < 5) {
-                                $messageErr = "The message must be at least 5 characters long";
-                            }
-                        }
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      // Sanitize input
+      $name = test_input($_POST["name"]);
+      $email = test_input($_POST["email"]);
+      $company_name = test_input($_POST["company_name"]);
+      $message = test_input($_POST["message"]);
+      $telephone = test_input($_POST["telephone"]);
+      $marketing = isset($_POST['check-sup']) ? 1 : 0;
+      // Validate name
+      if (empty($name)) {
+          $nameErr = "Name is required";
+      }
+      // Validate Email
+      if (empty($email)) {
+          $emailErr = "Email is required";
+      } elseif (!preg_match("/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/", $email)) {
+          $emailErr = "Invalid email format";
+      }
+      // Validate telephone
+      if (empty($telephone)) {
+          $telephoneErr = "Telephone number is required";
+      } elseif (!preg_match("/^\d+$/", $telephone)) {
+          $telephoneErr = "The telephone format is incorrect.";
+      } elseif(strlen($telephone)> 15){
+          $telephoneErr = "Telephone number is too long";
+      }
+      // Validate message
+      if (strlen($message) < 5) {
+          $messageErr = "The message must be at least 5 characters long";
+      }
+  }
 
                     </code>
                 </pre>
@@ -144,46 +144,46 @@
                 <h2>Javascript</h2>
                 <pre class="">
                   <code class="">
-                                        const form = document.getElementById('form');
-                                        const errorElement = document.createElement('div');
-                                        errorElement.id = 'error';
-                                        errorElement.textContent = '';
-                                        form.parentNode.insertBefore(errorElement, form);
+  const form = document.getElementById('form');
+  const errorElement = document.createElement('div');
+  errorElement.id = 'error';
+  errorElement.textContent = '';
+  form.parentNode.insertBefore(errorElement, form);
 
-                                        // Declare error messages in array
-                                        form.addEventListener('submit', (e) => {
-                                            const inputs = [
-                                                { element: document.getElementById('name'), message: 'Please input your name' },
-                                                { element: document.getElementById('surname'), message: 'Please input your surname' },
-                                                { element: document.getElementById('email'), message: 'Please input a valid email' }
-                                            ];
+  // Declare error messages in array
+  form.addEventListener('submit', (e) => {
+      const inputs = [
+          { element: document.getElementById('name'), message: 'Please input your name' },
+          { element: document.getElementById('surname'), message: 'Please input your surname' },
+          { element: document.getElementById('email'), message: 'Please input a valid email' }
+      ];
 
-                                            // Declare empty variable
-                                            let firstError = null;
+      // Declare empty variable
+      let firstError = null;
 
-                                            // If input is empty, show error.
-                                            inputs.some(input => {
-                                                if (input.element.value.trim() === '') {
-                                                    firstError = input.message;
-                                                    return true; // Stop the loop
-                                                }
-                                                // Regex loop check for emails
-                                                if (input.element === document.getElementById('email')) {
-                                                    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                                                    if (!emailPattern.test(input.element.value.trim())) {
-                                                        firstError = 'Please input a valid email';
-                                                        return true; // Stop the loop
-                                                    }
-                                                }
-                                            });
+      // If input is empty, show error.
+      inputs.some(input => {
+          if (input.element.value.trim() === '') {
+              firstError = input.message;
+              return true; // Stop the loop
+          }
+          // Regex loop check for emails
+          if (input.element === document.getElementById('email')) {
+              const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+              if (!emailPattern.test(input.element.value.trim())) {
+                  firstError = 'Please input a valid email';
+                  return true; // Stop the loop
+              }
+          }
+      });
 
-                                            // Prevent submission and display error
-                                            if (firstError) {
-                                                e.preventDefault();
-                                                errorElement.textContent = firstError;
-                                                errorElement.style.display = 'block'; // Show the error message
-                                            }
-                                        });
+      // Prevent submission and display error
+      if (firstError) {
+          e.preventDefault();
+          errorElement.textContent = firstError;
+          errorElement.style.display = 'block'; // Show the error message
+      }
+  });
 
                                     </code>
                                 </pre>
@@ -204,26 +204,26 @@
                     <div class="coding-container">
                 <h2>Sass/Css</h2>
                 <pre class="code-2"><code>
-                  @mixin hover-style($bg-color, $text-color, $btn-bg) {
-                      &:hover {
-                          background-color: $bg-color;
-                          .btn-art {
-                              color: $text-color;
-                              background-color: $btn-bg;
-                          }
-                          .icon {
-                              color: $text-color;
-                              background-color: $btn-bg;
-                          }
-                      }
-                  }
+@mixin hover-style($bg-color, $text-color, $btn-bg) {
+  &:hover {
+    background-color: $bg-color;
+    .btn-art {
+        color: $text-color;
+        background-color: $btn-bg;
+          }
+    .icon {
+        color: $text-color;
+        background-color: $btn-bg;
+          }
+      }
+  }
 
-                  .bespoke-software {
-                      @include hover-style($hoki, $hoki, $white);
-                  }
+  .bespoke-software {
+      @include hover-style($hoki, $hoki, $white);
+  }
 
-                  .it-support {
-                      @include hover-style($blue, $blue, $white);
+  .it-support {
+      @include hover-style($blue, $blue, $white);
 }
                                    </code></pre>
                                    <br>

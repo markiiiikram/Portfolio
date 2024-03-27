@@ -1,52 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mark Skobelevs Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="icon" type="image/png" href="images/favicon-32x32.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="styles/css/application.css" />
-    <link rel="stylesheet" href="javascript/main.js" />
+    <?php include_once './inc/head.php' ?>
   </head>
   <body>
     <div class="grid">
-      <div class="sidebar hidden-xs" id="sidebar">
-        <button class="hamburger" id="hamburger" onclick="show()">
-          <span class="burger-top"></span>
-          <span class="burger-middle"></span>
-          <span class="burger-bottom"></span>
-        </button>
-        <a href="index.html"><div class="top-left-initials">MS</div> </a>
-        <ul class="nav-bar">
-          <li style="--clr: #fff">
-            <a href="about-me.html" data-text="&nbsp;About Me&nbsp;"
-              >&nbsp;About Me&nbsp;</a
-            >
-          </li>
-          <li style="--clr: #fff">
-            <a href="#Portfolio" data-text="&nbsp;My Portfolio&nbsp;"
-              >&nbsp;My Portfolio&nbsp;</a
-            >
-          </li>
-          <li style="--clr: #fff">
-            <a href="coding-examples.html" data-text="&nbsp;Coding-examples"
-              >&nbsp;Coding-examples&nbsp;</a
-            >
-          </li>
-          <li style="--clr: #fff">
-            <a href="scs-scheme.html" data-text="&nbsp;SCS-SCHEME"
-              >&nbsp;Scs-Scheme&nbsp;</a
-            >
-          </li>
-          <li style="--clr: #fffd">
-            <a href="#contact" data-text="&nbsp;Contact">&nbsp;Contact&nbsp;</a>
-          </li>
-        </ul>
-      </div>
+    <?php include_once './inc/sidebar.php' ?>
 
       <div class="main-body">
         <div class="main-header header" id="header">
@@ -59,10 +18,9 @@
               >Scroll down <br /><span class="icon-arrow-down-thick"></span
             ></a>
           </div>
-      
         </div>
         <!-- Projects -->
-  
+
           <div class="container" id="container-top">
             <div class="h2" id="Portfolio"><h2>My Portfolio</h2></div>
             <div class="project-grid">
@@ -80,7 +38,7 @@
                     <span class="icon-sass"></span>
                     <span class="icon-css3"></span>
                   </div>
-                 
+
                 </div>
               </div>
             </div>
@@ -114,7 +72,7 @@
             </div>
             <div class="project-grid-col-2">
               <div class="project-2 article-container">
-      
+
 
                 <div class="contents-container">
                   <div class="project-image">
@@ -126,7 +84,7 @@
                     <span class="icon-sass"></span>
                     <span class="icon-css3"></span>
                   </div>
-                  
+
                 </div>
               </div>
             </div>
@@ -158,54 +116,12 @@
             </div>
             </div>
           </div>
-
           <!-- Form -->
-          <div class="contact-container" id="contact">
-            <div class="get-in-touch">
-              <h3>Get In Touch</h3>
-              <p>
-                You are welcome to reach out to me either by phone,email or by
-                using the form. I'll get back to you as soon as possible.
-              </p>
-              <h4>07447-410-381</h4>
-              <h5>markskobelevs@gmail.com</h5>
-            </div>
-            <div class="leave-a-message">
-              <div id="error"></div>
-              <form class="form-field" name="form" id="form">
-                <input
-                  type="text"
-                  class="input-field"
-                  id="name"
-                  placeholder="First Name*" />
-                <input
-                  type="text"
-                  class="input-field"
-                  id="surname"
-                  placeholder="Last Name*" />
-                <input
-                  type="text"
-                  class="input-field"
-                  id="email"
-                  placeholder="Email Address*" />
-                <input type="text" class="input-field" placeholder="Subject" />
-                <textarea class="input-field" placeholder="Message"></textarea>
-                <!-- submit button - gotta CSS  -->
-                <button id="submit">Submit</button>
-              </form>
-            </div>
-          </div>
-          <div class="scroll-container-bottom">
-            <a href="#header" class="scroll-down"
-              ><span class="icon-arrow-up-thick"></span><br />Scroll Up
-            </a>
-          </div>
+        <?php include 'inc/contact.php'?>
         </div>
       </canvas>
       </div>
     </div>
-    <script src="javascript/jQuery-3.7.1.min.js"></script>
-    <script src="javascript/main.js"></script>
-
+  <?php include './inc/script.php'?>
   </body>
 </html>
