@@ -1,14 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mark Skobelevs Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="icon" type="image/png" href="images/favicon-32x32.png" />
-    <link rel="stylesheet" href="styles/css/application.css" />
-    <link rel="stylesheet" href="javascript/main.js" />
+  <?php include_once './inc/head.php' ?>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github-dark.min.css" />
@@ -16,40 +9,7 @@
   </head>
   <body>
     <div class="grid">
-      <div class="sidebar hidden-xs" id="sidebar">
-        <button class="hamburger" id="hamburger" onclick="show()">
-          <span class="burger-top"></span>
-          <span class="burger-middle"></span>
-          <span class="burger-bottom"></span>
-        </button>
-        <a href="index.html"><div class="top-left-initials">MS</div> </a>
-        <ul class="nav-bar">
-          <li style="--clr: #fff">
-            <a href="about-me.html" data-text="&nbsp;About Me&nbsp;"
-              >&nbsp;About Me&nbsp;</a
-            >
-          </li>
-          <li style="--clr: #fff">
-            <a href="index.html" data-text="&nbsp;My Portfolio&nbsp;"
-              >&nbsp;My Portfolio&nbsp;</a
-            >
-          </li>
-          <li style="--clr: #fff">
-            <a href="coding-examples.html" data-text="&nbsp;Coding-examples"
-              >&nbsp;Coding-examples&nbsp;</a
-            >
-          </li>
-          <li style="--clr: #fff">
-            <a href="scs-scheme.html" data-text="&nbsp;SCS-SCHEME"
-              >&nbsp;Scs-Scheme&nbsp;</a
-            >
-          </li>
-          <li style="--clr: #fff">
-            <a href="#contact" data-text="&nbsp;Contact">&nbsp;Contact&nbsp;</a>
-          </li>
-        </ul>
-      </div>
-  
+    <?php include_once './inc/sidebar.php' ?>
     <div class="main-body">
       <!-- Banner image -->
       <div class="header" id="header">
@@ -114,24 +74,25 @@
                 <h2>Form Submission</h2>
                 <pre>
                   <code>
-                    // Proceed with database insertion if there are no errors
-                    if (empty($nameErr) && empty($emailErr) && empty($telephoneErr) && empty($messageErr)) {
-                        try {
-                            include "dbCon.php";
-                            $sql = "INSERT INTO contactus (name, company_name, email, telephone, message, marketing) VALUES (?, ?, ?, ?, ?, ?)";
-                            $stmt = mysqli_stmt_init($conn);
-                            if (!mysqli_stmt_prepare($stmt, $sql)) {
-                                throw new Exception(mysqli_error($conn));
-                            }
-                            mysqli_stmt_bind_param($stmt, "sssssi", $name, $company_name, $email, $telephone, $message, $marketing);
-                            mysqli_stmt_execute($stmt);
-                            mysqli_stmt_close($stmt);
-                            mysqli_close($conn);
-                            $successMessage = "Your Enquiry has been submitted.";
-                        } catch (Exception $e) {
-                            echo "Error: " . $e->getMessage();
-                        }
-                    }
+
+if (empty($nameErr) && empty($emailErr) && empty($telephoneErr) && empty($messageErr)) {
+    try {
+        include "dbCon.php";
+        $sql = "INSERT INTO contactus (name, company_name, email, telephone, message, marketing)
+        VALUES (?, ?, ?, ?, ?, ?)";
+        $stmt = mysqli_stmt_init($conn);
+        if (!mysqli_stmt_prepare($stmt, $sql)) {
+            throw new Exception(mysqli_error($conn));
+        }
+        mysqli_stmt_bind_param($stmt, "sssssi", $name, $company_name, $email, $telephone, $message, $marketing);
+        mysqli_stmt_execute($stmt);
+        mysqli_stmt_close($stmt);
+        mysqli_close($conn);
+        $successMessage = "Your Enquiry has been submitted.";
+    } catch (Exception $e) {
+        echo "Error: " . $e->getMessage();
+    }
+}
                   </code>
                 </pre>
                 <div class="comment"> If there are no validation errors in the form data, this code inserts the sanitized form data into a database table. It connects to the database, prepares an SQL statement to insert the data, binds the sanitized values to the statement, executes it, and closes the statement and the database connection. If an error occurs during this process, it catches the exception and outputs an error message. Finally, if the insertion is successful, it displays a success message. </div>
@@ -158,21 +119,19 @@
           { element: document.getElementById('email'), message: 'Please input a valid email' }
       ];
 
-      // Declare empty variable
       let firstError = null;
 
-      // If input is empty, show error.
       inputs.some(input => {
           if (input.element.value.trim() === '') {
               firstError = input.message;
-              return true; // Stop the loop
+              return true;
           }
           // Regex loop check for emails
           if (input.element === document.getElementById('email')) {
               const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
               if (!emailPattern.test(input.element.value.trim())) {
                   firstError = 'Please input a valid email';
-                  return true; // Stop the loop
+                  return true;
               }
           }
       });
@@ -181,7 +140,7 @@
       if (firstError) {
           e.preventDefault();
           errorElement.textContent = firstError;
-          errorElement.style.display = 'block'; // Show the error message
+          errorElement.style.display = 'block';
       }
   });
 
@@ -243,52 +202,14 @@
           </div>
 
           <!-- Form -->
-          <div class="contact-container" id="contact">
-            <div class="get-in-touch">
-              <h3>Get In Touch</h3>
-              <p>
-                You are welcome to reach out to me either by phone,email or by
-                using the form below. I'll get back to you as soon as possible.
-              </p>
-              <h4>07447-410-381</h4>
-              <h5>markskobelevs@gmail.com</h5>
-            </div>
-            <div class="leave-a-message">
-              <div id="error"></div>
-              <form class="form-field" id="form">
-                <input
-                  type="text"
-                  class="input-field"
-                  id="name"
-                  placeholder="First Name*" />
-                <input
-                  type="text"
-                  class="input-field"
-                  id="surname"
-                  placeholder="Last Name*" />
-                <input
-                  type="text"
-                  class="input-field"
-                  id="email"
-                  placeholder="Email Address*" />
-                <input type="text" class="input-field" placeholder="Subject" />
-                <textarea class="input-field" placeholder="Message"></textarea>
-                <!-- submit button - gotta CSS  -->
-                <button id="submit">Submit</button>
-              </form>
+          <?php include 'inc/contact.php'?>
             </div>
           </div>
-        </div>
-        <div>
-          <a href="#header" class="scroll-down"
-            ><span class="icon-arrow-up-thick"></span><br />Scroll Up
-          </a>
         </div>
       </div>
     </div>
     </div>
-    <script src="javascript/jQuery-3.7.1.min.js"></script>
-    <script src="javascript/main.js"></script>
+    <?php include './inc/script.php'?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/go.min.js"></script>
     <script>
       hljs.highlightAll();

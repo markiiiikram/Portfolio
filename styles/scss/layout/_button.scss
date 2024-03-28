@@ -1,16 +1,17 @@
-
-#submit{
-  display:block;
-  background-color:white;
-  line-height:3;
-  width:150px;
+#submit {
+  display: block;
+  background-color: white;
+  line-height: 3;
+  width: 150px;
   justify-self: center;
-  color:black;
-  border-radius:3px;
+  color: black;
+  border-radius: 3px;
+  border: 0px;
   @include center;
   cursor: pointer;
 }
 
-#submit:hover{
+#submit:hover {
   background-color: $off-white;
+  opacity: 0.7;
 }

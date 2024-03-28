@@ -8,4 +8,4 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="styles/css/application.css" />
     <link rel="stylesheet" href="javascript/main.js" />
-    <script src="https://www.google.com/recaptcha/enterprise.js?render=6Le7uKUpAAAAADUYlwzZ3l-tkJmTWbCKIpI54XOm"></script>
+    <!-- <script src="https://www.google.com/recaptcha/enterprise.js?render=6Le7uKUpAAAAADUYlwzZ3l-tkJmTWbCKIpI54XOm"></script> -->

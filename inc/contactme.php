@@ -40,7 +40,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($nameErr) && empty($emailErr) && empty($messageErr))  {
         try {
             // Initialize PHPMailer for sending email
-    
 
             $phpmailer = new PHPMailer();
             $phpmailer->isSMTP();

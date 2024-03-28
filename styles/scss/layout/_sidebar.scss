@@ -108,14 +108,14 @@ ul li a:hover::before {
   filter: drop-shadow(0 0 5px var(--clr));
 }
 .socials {
-  margin-top: 50px;
+  margin-top: 20px;
   display: flex;
   justify-content: space-around;
 }
 .icon-linkedin,
 .icon-github {
   font-size: 50px;
-  padding: 3px;
+  padding: 20px;
   border-radius: 50%;
   transition: ease-in 0.3s;
 }

@@ -105,6 +105,20 @@ form.addEventListener("submit", (e) => {
   }
 });
 
-/////////////////////////////////
-////////////// falling sand
-////////////////////////////////
+////////////////////////////////////
+//////////// Close button
+///////////////////////////////////
+document.addEventListener("DOMContentLoaded", function () {
+  var closeButtons = document.querySelectorAll(
+    ".error span.close, .success span.close"
+  );
+
+  closeButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      var errorDiv = button.closest(".error, .success");
+      if (errorDiv) {
+        errorDiv.remove();
+      }
+    });
+  });
+});
