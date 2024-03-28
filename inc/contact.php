@@ -39,13 +39,13 @@ require 'vendor/autoload.php';
                 </div>
             <?php endif; ?>
         <?php endif; ?>
-        <form class="form-field" name="form" id="form" method="POST" action="">
+        <form class="form-field" name="form" id="form" method="POST" action="#contact">
             <input type="text" class="input-field" id="name" name="name" placeholder="First Name*" value="<?php echo htmlspecialchars($name); ?>"/>
             <input type="text" class="input-field" id="surname" name="surname" placeholder="Last Name*" value="<?php echo htmlspecialchars($surname); ?>"/>
-            <input type="text" class="input-field" id="email" name="email" placeholder="Email Address*" value="<?php echo htmlspecialchars($email); ?>"/> 
+            <input type="text" class="input-field" id="email" name="email" placeholder="Email Address*" value="<?php echo htmlspecialchars($email); ?>"/>
             <input type="text" class="input-field" id="subject" name="subject" placeholder="Subject"/>
             <textarea class="input-field" id="message" name="message" placeholder="Message *" value="<?php echo htmlspecialchars($message); ?>"></textarea>
-            <button type="submit" id="submit">Submit</button>
+            <button type="submit" id="submit" >Submit</button>
         </form>
     </div>
 </div>

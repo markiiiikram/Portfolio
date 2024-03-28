@@ -25,18 +25,18 @@
 }
 .input-field {
   width: 100%;
-  border: 1px solid transparent;
+  border: 3px solid transparent;
   border-radius: 4px;
   margin-top: 10px;
   padding: 15px 33px;
   margin: 10px 0px;
   background-color: $off-white;
+  font: inherit;
 }
 .message {
   min-height: 10px;
 }
 .input-field:focus {
-  border-color: #ff9900;
   outline: 0;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
     0 0 8px rgba(91, 192, 222, 0.6);

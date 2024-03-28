@@ -51,60 +51,74 @@ document.body.addEventListener("click", function (event) {
 ///////////////////////////////////////////////////////////////////////////
 //Form validation & styling for error message
 
-const form = document.getElementById("form");
-const errorElement = document.createElement("div");
-errorElement.id = "error";
-errorElement.textContent = "";
-errorElement.style.borderBottom = "3px solid white";
-errorElement.style.padding = "5px";
-errorElement.style.borderRadius = "3px";
-errorElement.style.fontWeight = "600";
-errorElement.style.fontSize = "30px";
-errorElement.style.display = "none";
+document.addEventListener("DOMContentLoaded", function () {
+  var form = document.getElementById("form");
+  var submitButton = document.getElementById("submit");
+  var nameInput = document.getElementById("name");
+  var surnameInput = document.getElementById("surname");
+  var emailInput = document.getElementById("email");
+  var subjectInput = document.getElementById("subject");
+  var messageInput = document.getElementById("message");
 
-// Insert errorElement before the form
-form.parentNode.insertBefore(errorElement, form);
-//Declare error messages in array
-form.addEventListener("submit", (e) => {
-  const inputs = [
-    {
-      element: document.getElementById("name"),
-      message: "Please input your name",
-    },
-    {
-      element: document.getElementById("surname"),
-      message: "Please input your surname",
-    },
-    {
-      element: document.getElementById("email"),
-      message: "Please input a valid email",
-    },
-  ];
-  // Declare empty variable
-  let firstError = null;
-  //If input is empty, show error.
-  inputs.some((input) => {
-    if (input.element.value.trim() === "") {
-      firstError = input.message;
-      return true; // Stop the loop
+  // Event listener for form submission
+  submitButton.addEventListener("click", function (event) {
+    var isValid = true;
+
+    // Validate name input
+    if (nameInput.value.trim() === "") {
+      nameInput.classList.add("invalid");
+      isValid = false;
+    } else {
+      nameInput.classList.remove("invalid");
     }
-    // Regex loop check for emails
-    if (input.element === document.getElementById("email")) {
-      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailPattern.test(input.element.value.trim())) {
-        firstError = "Please input a valid email";
-        return true; // Stop the loop
+
+    // Validate surname input
+    if (surnameInput.value.trim() === "") {
+      surnameInput.classList.add("invalid");
+      isValid = false;
+    } else {
+      surnameInput.classList.remove("invalid");
+    }
+
+    // Validate email input
+    if (emailInput.value.trim() === "" || !isValidEmail(emailInput.value)) {
+      emailInput.classList.add("invalid");
+      isValid = false;
+    } else {
+      emailInput.classList.remove("invalid");
+    }
+
+    // Validate message input
+    if (messageInput.value.trim() === "") {
+      messageInput.classList.add("invalid");
+      isValid = false;
+    } else {
+      messageInput.classList.remove("invalid");
+    }
+
+    // Prevent form submission if any field is invalid
+    if (!isValid) {
+      event.preventDefault();
+    }
+  });
+
+  // Event listener for input change
+  form.addEventListener("input", function (event) {
+    var input = event.target;
+    if (input.matches("#name, #surname, #email, #message")) {
+      if (input.value.trim() === "") {
+        input.classList.add("invalid");
+      } else {
+        input.classList.remove("invalid");
       }
     }
   });
-  // Prevent submission and display error
-  if (firstError) {
-    e.preventDefault();
-    errorElement.textContent = firstError;
-    errorElement.style.display = "block"; // Show the error message
+
+  function isValidEmail(email) {
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
   }
 });
-
 ////////////////////////////////////
 //////////// Close button
 ///////////////////////////////////

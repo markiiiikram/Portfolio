@@ -4,7 +4,7 @@
           <span class="burger-middle"></span>
           <span class="burger-bottom"></span>
         </button>
-        <a href="index.html"><div class="top-left-initials">MS</div> </a>
+        <a href="index.php"><div class="top-left-initials">MS</div> </a>
         <ul class="nav-bar">
           <li style="--clr: #fff">
             <a href="about-me.php" data-text="&nbsp;About Me&nbsp;"
